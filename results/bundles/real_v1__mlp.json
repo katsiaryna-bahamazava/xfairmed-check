@@ -1,0 +1,806 @@
+{
+ "bundle_version": "1.0",
+ "cohort": "real_v1",
+ "model": "mlp",
+ "I": {
+  "dataset_id": "TCGA-BRCA multi-omics (brca_data_w_subtypes.csv)",
+  "panel": "omics_leakage_safe",
+  "task": "IDC vs ILC",
+  "n_samples": 705,
+  "class_counts": {
+   "IDC": 574,
+   "ILC": 131
+  },
+  "audited_attributes": [
+   "audit_ER_Status",
+   "audit_PR_Status",
+   "audit_HER2_Final_Status",
+   "audit_TP53_mut_status",
+   "audit_PIK3CA_mut_status",
+   "audit_GATA3_mut_status",
+   "audit_CDH1_mut_status",
+   "audit_ECadherin_low_status",
+   "audit_CDH1_ECadherin_disruption_status"
+  ]
+ },
+ "M": {
+  "model_id": "mlp",
+  "predictions": {
+   "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/oof_predictions_mlp_omics_leakage_safe.csv"
+  },
+  "metrics": {
+   "n_samples": 705.0,
+   "accuracy": 0.8709219858156029,
+   "balanced_accuracy": 0.7322060270766284,
+   "precision_ilc": 0.7127659574468085,
+   "recall_ilc": 0.5114503816793893,
+   "f1_ilc": 0.5955555555555555,
+   "roc_auc": 0.8657605660026065,
+   "average_precision": 0.6898882767955893
+  },
+  "metrics_ref": {
+   "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/oof_metrics_mlp_omics_leakage_safe.csv"
+  }
+ },
+ "G": {
+  "support_policy": {
+   "min_total": 35,
+   "min_class": 10,
+   "source": "studies/tcga_brca_model_agnostic_fairness/scripts/tcga_brca_setup.py::flag_low_support_subgroups"
+  },
+  "groups": [
+   {
+    "attribute": "audit_ER_Status",
+    "group": "Negative",
+    "n_IDC": 132,
+    "n_ILC": 3,
+    "total": 135,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status",
+      "group": "Negative"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ER_Status",
+    "group": "Positive",
+    "n_IDC": 364,
+    "n_ILC": 50,
+    "total": 414,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status",
+      "group": "Positive"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ER_Status",
+    "group": "Unknown",
+    "n_IDC": 78,
+    "n_ILC": 78,
+    "total": 156,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status",
+      "group": "Unknown"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PR_Status",
+    "group": "Negative",
+    "n_IDC": 184,
+    "n_ILC": 9,
+    "total": 193,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status",
+      "group": "Negative"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PR_Status",
+    "group": "Positive",
+    "n_IDC": 310,
+    "n_ILC": 43,
+    "total": 353,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status",
+      "group": "Positive"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PR_Status",
+    "group": "Unknown",
+    "n_IDC": 80,
+    "n_ILC": 79,
+    "total": 159,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status",
+      "group": "Unknown"
+     }
+    }
+   },
+   {
+    "attribute": "audit_HER2_Final_Status",
+    "group": "Negative",
+    "n_IDC": 408,
+    "n_ILC": 49,
+    "total": 457,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status",
+      "group": "Negative"
+     }
+    }
+   },
+   {
+    "attribute": "audit_HER2_Final_Status",
+    "group": "Positive",
+    "n_IDC": 84,
+    "n_ILC": 2,
+    "total": 86,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status",
+      "group": "Positive"
+     }
+    }
+   },
+   {
+    "attribute": "audit_HER2_Final_Status",
+    "group": "Unknown",
+    "n_IDC": 82,
+    "n_ILC": 80,
+    "total": 162,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status",
+      "group": "Unknown"
+     }
+    }
+   },
+   {
+    "attribute": "audit_TP53_mut_status",
+    "group": "TP53_WT",
+    "n_IDC": 355,
+    "n_ILC": 123,
+    "total": 478,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status",
+      "group": "TP53_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_TP53_mut_status",
+    "group": "TP53_mut",
+    "n_IDC": 219,
+    "n_ILC": 8,
+    "total": 227,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status",
+      "group": "TP53_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PIK3CA_mut_status",
+    "group": "PIK3CA_WT",
+    "n_IDC": 401,
+    "n_ILC": 73,
+    "total": 474,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status",
+      "group": "PIK3CA_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PIK3CA_mut_status",
+    "group": "PIK3CA_mut",
+    "n_IDC": 173,
+    "n_ILC": 58,
+    "total": 231,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status",
+      "group": "PIK3CA_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_GATA3_mut_status",
+    "group": "GATA3_WT",
+    "n_IDC": 508,
+    "n_ILC": 125,
+    "total": 633,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status",
+      "group": "GATA3_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_GATA3_mut_status",
+    "group": "GATA3_mut",
+    "n_IDC": 66,
+    "n_ILC": 6,
+    "total": 72,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status",
+      "group": "GATA3_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_mut_status",
+    "group": "CDH1_WT",
+    "n_IDC": 563,
+    "n_ILC": 62,
+    "total": 625,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status",
+      "group": "CDH1_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_mut_status",
+    "group": "CDH1_mut",
+    "n_IDC": 11,
+    "n_ILC": 69,
+    "total": 80,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status",
+      "group": "CDH1_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ECadherin_low_status",
+    "group": "Ecadherin_low_q25",
+    "n_IDC": 70,
+    "n_ILC": 107,
+    "total": 177,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status",
+      "group": "Ecadherin_low_q25"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ECadherin_low_status",
+    "group": "Ecadherin_not_low",
+    "n_IDC": 504,
+    "n_ILC": 24,
+    "total": 528,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status",
+      "group": "Ecadherin_not_low"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_ECadherin_disruption_status",
+    "group": "CDH1_Ecadherin_disrupted_proxy",
+    "n_IDC": 360,
+    "n_ILC": 125,
+    "total": 485,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status",
+      "group": "CDH1_Ecadherin_disrupted_proxy"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_ECadherin_disruption_status",
+    "group": "CDH1_Ecadherin_not_disrupted_proxy",
+    "n_IDC": 214,
+    "n_ILC": 6,
+    "total": 220,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status",
+      "group": "CDH1_Ecadherin_not_disrupted_proxy"
+     }
+    }
+   }
+  ]
+ },
+ "P": {
+  "DF": {
+   "value": 0.5405280695790249,
+   "components": {
+    "RES": 0.6009458361903222,
+    "MIS": 0.6320693583844954,
+    "FDS": 0.872649649885937,
+    "IBS": 0.05644743385534565
+   },
+   "ref": {
+    "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_summary.csv"
+   }
+  },
+  "DF_units": {
+   "audit_ER_Status": {
+    "value": 0.5327491786576009,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ER_Status"
+     }
+    }
+   },
+   "audit_PR_Status": {
+    "value": 0.5794350709996088,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PR_Status"
+     }
+    }
+   },
+   "audit_HER2_Final_Status": {
+    "value": 0.5136620702468206,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "audit_TP53_mut_status": {
+    "value": 0.6026211948554613,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "audit_PIK3CA_mut_status": {
+    "value": 0.6508086734583055,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "audit_GATA3_mut_status": {
+    "value": 0.5227576593984777,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "audit_CDH1_mut_status": {
+    "value": 0.36909879411205554,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "audit_ECadherin_low_status": {
+    "value": 0.48028468454854073,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "audit_CDH1_ECadherin_disruption_status": {
+    "value": 0.6133352999343544,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   }
+  },
+  "AMF": {
+   "value": 0.91557604812418,
+   "components": {
+    "PP": 0.888250196659396,
+    "PR": 0.999341160686172,
+    "RP": 0.8591367870269725
+   },
+   "use_only_supported_groups": true,
+   "ref": {
+    "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_summary_mlp_oof_omics_leakage_safe.csv"
+   }
+  },
+  "parity_units": {
+   "audit_CDH1_ECadherin_disruption_status": {
+    "PP": null,
+    "RP": null,
+    "AMF_unit": null,
+    "groups_used": [],
+    "excluded_groups": [
+     "CDH1_Ecadherin_not_disrupted_proxy"
+    ],
+    "note": "Less than two supported groups available.",
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   },
+   "audit_CDH1_mut_status": {
+    "PP": 0.9039081774073142,
+    "RP": 0.7366999999999999,
+    "AMF_unit": 0.8799831126978287,
+    "groups_used": [
+     "CDH1_WT",
+     "CDH1_mut"
+    ],
+    "excluded_groups": [],
+    "note": null,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "audit_ECadherin_low_status": {
+    "PP": 0.9721369233051476,
+    "RP": 0.7423600410888547,
+    "AMF_unit": 0.904612708360058,
+    "groups_used": [
+     "Ecadherin_low_q25",
+     "Ecadherin_not_low"
+    ],
+    "excluded_groups": [],
+    "note": null,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "audit_ER_Status": {
+    "PP": 0.8384981684981685,
+    "RP": 0.9341322928279451,
+    "AMF_unit": 0.9239905406707618,
+    "groups_used": [
+     "Positive",
+     "Unknown"
+    ],
+    "excluded_groups": [
+     "Negative"
+    ],
+    "note": null,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "audit_GATA3_mut_status": {
+    "PP": null,
+    "RP": null,
+    "AMF_unit": null,
+    "groups_used": [],
+    "excluded_groups": [
+     "GATA3_mut"
+    ],
+    "note": "Less than two supported groups available.",
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "audit_HER2_Final_Status": {
+    "PP": 0.8657218985155037,
+    "RP": 0.8999243590782614,
+    "AMF_unit": 0.921662472759979,
+    "groups_used": [
+     "Negative",
+     "Unknown"
+    ],
+    "excluded_groups": [
+     "Positive"
+    ],
+    "note": null,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "audit_PIK3CA_mut_status": {
+    "PP": 0.9375919026268907,
+    "RP": 0.8893638007562058,
+    "AMF_unit": 0.9420989546897561,
+    "groups_used": [
+     "PIK3CA_WT",
+     "PIK3CA_mut"
+    ],
+    "excluded_groups": [],
+    "note": null,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "audit_PR_Status": {
+    "PP": 0.8116441096033502,
+    "RP": 0.952340228410569,
+    "AMF_unit": 0.921108499566697,
+    "groups_used": [
+     "Positive",
+     "Unknown"
+    ],
+    "excluded_groups": [
+     "Negative"
+    ],
+    "note": null,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "audit_TP53_mut_status": {
+    "PP": null,
+    "RP": null,
+    "AMF_unit": null,
+    "groups_used": [],
+    "excluded_groups": [
+     "TP53_mut"
+    ],
+    "note": "Less than two supported groups available.",
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   }
+  },
+  "XCFS": {
+   "value": 0.7635054902178372,
+   "label": "partial_XCFS_without_SAS_CSD",
+   "aggregation": "geometric_mean",
+   "ref": {
+    "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/xcfs_partial_mlp_oof_omics_leakage_safe.csv"
+   }
+  }
+ },
+ "A": {
+  "declared_scope": "partial",
+  "metrics": {
+   "ASS": {
+    "status": "computed",
+    "value": 0.8333292107084936,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_layer_summary_partial_mlp_oof_omics_leakage_safe.csv"
+    }
+   },
+   "ERS": {
+    "status": "computed",
+    "value": 0.9653504100748467,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_layer_summary_partial_mlp_oof_omics_leakage_safe.csv"
+    }
+   },
+   "SAS": {
+    "status": "not_applicable",
+    "justification": "audited attributes not predictors",
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_layer_summary_partial_mlp_oof_omics_leakage_safe.csv"
+    }
+   },
+   "CSD": {
+    "status": "not_applicable",
+    "justification": "audited attributes not predictors",
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_layer_summary_partial_mlp_oof_omics_leakage_safe.csv"
+    }
+   }
+  },
+  "EXL": {
+   "value": 0.8993398103916701,
+   "label": "EXL_partial(ASS,ERS)",
+   "ref": {
+    "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_layer_summary_partial_mlp_oof_omics_leakage_safe.csv"
+   }
+  },
+  "ASS_units": {
+   "audit_ER_Status": {
+    "value": 0.8215380317584656,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "audit_PR_Status": {
+    "value": 0.845550799238129,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "audit_HER2_Final_Status": {
+    "value": 0.8028771674152722,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "audit_TP53_mut_status": {
+    "value": 0.836684477041151,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "audit_PIK3CA_mut_status": {
+    "value": 0.8787181981161292,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "audit_GATA3_mut_status": {
+    "value": 0.8426771136737811,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "audit_CDH1_mut_status": {
+    "value": 0.8403971595906476,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "audit_ECadherin_low_status": {
+    "value": 0.8665567008418289,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "audit_CDH1_ECadherin_disruption_status": {
+    "value": 0.7649632487010384,
+    "ref": {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   }
+  },
+  "declared_scope_source": "partial_XCFS_without_SAS_CSD"
+ },
+ "V": {
+  "xfairmed_version": "0.1.0",
+  "code_commit": "ca2a8c5ddd78a9128e4788dd31670421a43c1503",
+  "run_script": "studies/tcga_brca_model_agnostic_fairness/scripts/run_tcga_brca_paper.py",
+  "random_seed": 42,
+  "cv_folds": 5,
+  "dataset_file": "datasets/raw/brca_data_w_subtypes.csv",
+  "dataset_release": null,
+  "dataset_sha256": null,
+  "environment_lock": null,
+  "artifacts": {
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_by_attribute_mlp_oof_omics_leakage_safe.csv": "cd114fd408e59f3458cfada5280d66f1cfa0a270b146152da2ac55e0fba82732",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/amf_layer_summary_mlp_oof_omics_leakage_safe.csv": "1cbac49ca81d0960125faa493b00d0d121a8a4ec698917844c64192e507be35e",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_by_attribute.csv": "652d7a6e7d045991d5adfedda6b6ea6d756a9f1d09dd61d778a95f6a1bd728dc",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/data_fairness_layer_summary.csv": "8425919e4dd8ae42b59d1d0695c3b387772b7b61b609d876130629858946d9ac",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_ass_model_agnostic_mlp_oof_omics_leakage_safe.csv": "12eac319938a09c80f20ee3ee4bffa231cfbc6d21cec47837137225960c9be69",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/exl_layer_summary_partial_mlp_oof_omics_leakage_safe.csv": "9884cc4e4feb1b214d1f30939600bda9173b68c9af4f2f8cdca82caee3a06581",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/low_support_subgroups.csv": "811127a27060b798344ddf04ed07b12bb6aeb122dbc7ff29d916755aad39e279",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/oof_metrics_mlp_omics_leakage_safe.csv": "5d6227e0ef73ebcced44c0c8462b851621829317115385376340afe49dee4c6f",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/oof_predictions_mlp_omics_leakage_safe.csv": "452663669e3360e46cc2f9bace62ceb2c68734986bf932fa8414492717e39050",
+   "studies/tcga_brca_model_agnostic_fairness/results/tables/xcfs_partial_mlp_oof_omics_leakage_safe.csv": "66c49aa6c4b35b17790cc39cad79ba01e0690b9946ec9bb54d4613d75fff03ea"
+  }
+ },
+ "contract": {
+  "required_metrics": {
+   "DF": [
+    "RES",
+    "MIS",
+    "FDS",
+    "IBS"
+   ],
+   "AMF": [
+    "PP",
+    "PR",
+    "RP"
+   ],
+   "EXL": [
+    "ASS",
+    "ERS",
+    "SAS",
+    "CSD"
+   ]
+  },
+  "allow_declared_not_applicable": true,
+  "uncertainty": {
+   "required": false
+  },
+  "required_provenance": [
+   "xfairmed_version",
+   "code_commit",
+   "run_script",
+   "random_seed",
+   "cv_folds",
+   "dataset_file",
+   "dataset_release",
+   "dataset_sha256",
+   "environment_lock"
+  ]
+ }
+}

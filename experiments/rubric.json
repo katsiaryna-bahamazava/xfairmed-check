@@ -1,0 +1,78 @@
+{
+ "_doc": "Information-coverage rubric for RQ4, fixed before scoring (applies to the current XFAIR-MED v2 outputs). Items are review-relevant conditions recorded in the toolkit's own outputs: low-support subgroups (frozen eligibility manifest), attributes without pairwise parity, explanation-scope declarations, provenance claims/gates, and uncertainty-method declarations. A field counts as present for conditions A and B only if a concrete artifact supplies it; condition C is scored from the checker's findings (a field is present only if the finding carries it and every evidence reference resolves to a declared artifact). A and B were not designed to carry fields f4-f6, so the comparison is descriptive.",
+ "fields": {
+  "f1": "affected audited attribute and subgroup",
+  "f2": "affected metric or supporting evidence artifact",
+  "f3": "stated limitation or condition",
+  "f4": "responsible review role",
+  "f5": "proposed follow-up action",
+  "f6": "stable reference to evidence snapshot / reassessment"
+ },
+ "applicable": {
+  "low_support": [
+   "f1",
+   "f2",
+   "f3",
+   "f4",
+   "f5",
+   "f6"
+  ],
+  "parity_not_computable": [
+   "f1",
+   "f2",
+   "f3",
+   "f4",
+   "f5",
+   "f6"
+  ],
+  "exl_scope": [
+   "f2",
+   "f3",
+   "f4",
+   "f5",
+   "f6"
+  ],
+  "provenance": [
+   "f2",
+   "f3",
+   "f4",
+   "f5",
+   "f6"
+  ],
+  "uncertainty": [
+   "f2",
+   "f3",
+   "f4",
+   "f5",
+   "f6"
+  ]
+ },
+ "present": {
+  "A (overall performance summary only)": {},
+  "B (all XFAIR-MED v2 tables, specs and provenance record)": {
+   "low_support": {
+    "f1": "frozen_subgroup_support.csv",
+    "f2": "fairness_PP_RP_5x5.csv (frozen_required_groups_json)",
+    "f3": "frozen_subgroup_support.csv (warnings, primary_eligible)"
+   },
+   "parity_not_computable": {
+    "f1": "fairness_PP_RP_5x5.csv",
+    "f2": "fairness_PP_RP_5x5.csv",
+    "f3": "fairness_PP_RP_5x5.csv (status, n_frozen_required_groups)"
+   },
+   "exl_scope": {
+    "f2": "FULL_XCFS_LAYER_ABLATION.csv",
+    "f3": "SCIENTIFIC_METRIC_AUDIT_v0.1.0.md (SAS/CSD not applicable)"
+   },
+   "provenance": {
+    "f2": "cohort_provenance_v2.0.0.json",
+    "f3": "cohort_provenance_v2.0.0.json (claims, gates)"
+   },
+   "uncertainty": {
+    "f2": "ass_calibration_method_decisions.csv",
+    "f3": "ass_calibration_method_decisions.csv (overall_recommendation)"
+   }
+  },
+  "C": "computed from checker findings"
+ }
+}

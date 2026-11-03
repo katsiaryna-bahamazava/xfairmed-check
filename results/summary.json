@@ -1,0 +1,1420 @@
+{
+ "baseline": [
+  {
+   "cohort": "real_v2",
+   "model": "LR",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "LR",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 1,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "LR",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "LR",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "LR",
+   "rule": "R5",
+   "INCOMPLETE": 0,
+   "REVIEW": 2,
+   "OBSERVED": 4,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "LR",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 11,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "RF",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "RF",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 1,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "RF",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "RF",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "RF",
+   "rule": "R5",
+   "INCOMPLETE": 0,
+   "REVIEW": 2,
+   "OBSERVED": 4,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "RF",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 11,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "XGB",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "XGB",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 1,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "XGB",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "XGB",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "XGB",
+   "rule": "R5",
+   "INCOMPLETE": 0,
+   "REVIEW": 2,
+   "OBSERVED": 4,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "XGB",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 11,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "MLP",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "MLP",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 1,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "MLP",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "MLP",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "MLP",
+   "rule": "R5",
+   "INCOMPLETE": 0,
+   "REVIEW": 2,
+   "OBSERVED": 4,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "real_v2",
+   "model": "MLP",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 11,
+   "OBSERVED": 0,
+   "gate": "PASS"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "LR",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "LR",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "LR",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "LR",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 20,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "LR",
+   "rule": "R5",
+   "INCOMPLETE": 3,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "LR",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 3,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "LR",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "LR",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "LR",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "LR",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "LR",
+   "rule": "R5",
+   "INCOMPLETE": 3,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "LR",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 12,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "RF",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "RF",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "RF",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "RF",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 20,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "RF",
+   "rule": "R5",
+   "INCOMPLETE": 3,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "RF",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 3,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "RF",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "RF",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "RF",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "RF",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "RF",
+   "rule": "R5",
+   "INCOMPLETE": 3,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "RF",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 12,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "MLP",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "MLP",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "MLP",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "MLP",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 20,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "MLP",
+   "rule": "R5",
+   "INCOMPLETE": 3,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "semi_synthetic",
+   "model": "MLP",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 3,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "MLP",
+   "rule": "R1",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "MLP",
+   "rule": "R2",
+   "INCOMPLETE": 0,
+   "REVIEW": 9,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "MLP",
+   "rule": "R3",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 2,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "MLP",
+   "rule": "R4",
+   "INCOMPLETE": 0,
+   "REVIEW": 0,
+   "OBSERVED": 18,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "MLP",
+   "rule": "R5",
+   "INCOMPLETE": 3,
+   "REVIEW": 0,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  },
+  {
+   "cohort": "real_v1",
+   "model": "MLP",
+   "rule": "R6",
+   "INCOMPLETE": 0,
+   "REVIEW": 12,
+   "OBSERVED": 0,
+   "gate": "FAIL"
+  }
+ ],
+ "mutation_by_rule": [
+  {
+   "rule": "R1",
+   "TP": 529,
+   "FN": 0,
+   "FP": 0,
+   "TN": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": null
+  },
+  {
+   "rule": "R2",
+   "TP": 457,
+   "FN": 0,
+   "FP": 0,
+   "TN": 285,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": 1.0
+  },
+  {
+   "rule": "R3",
+   "TP": 112,
+   "FN": 0,
+   "FP": 0,
+   "TN": 84,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": 1.0
+  },
+  {
+   "rule": "R4",
+   "TP": 216,
+   "FN": 0,
+   "FP": 0,
+   "TN": 216,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": 1.0
+  },
+  {
+   "rule": "R5",
+   "TP": 184,
+   "FN": 0,
+   "FP": 0,
+   "TN": 17,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": 1.0
+  }
+ ],
+ "mutation_by_family": [
+  {
+   "family": "S1/S8",
+   "mutants": 7,
+   "correct": 7,
+   "masked": 0
+  },
+  {
+   "family": "S2",
+   "mutants": 529,
+   "correct": 529,
+   "masked": 96
+  },
+  {
+   "family": "S3",
+   "mutants": 590,
+   "correct": 590,
+   "masked": 0
+  },
+  {
+   "family": "S4",
+   "mutants": 98,
+   "correct": 98,
+   "masked": 0
+  },
+  {
+   "family": "S5",
+   "mutants": 216,
+   "correct": 216,
+   "masked": 0
+  },
+  {
+   "family": "S6",
+   "mutants": 201,
+   "correct": 201,
+   "masked": 0
+  }
+ ],
+ "r4_window": [
+  {
+   "model": "LR",
+   "pair": "DF~PP",
+   "pos_gap": 0.242433,
+   "neg_gap": 0.006107,
+   "window_lo": 0.025,
+   "window_hi": 0.225
+  },
+  {
+   "model": "LR",
+   "pair": "DF~EXL_ASS",
+   "pos_gap": 0.195565,
+   "neg_gap": 0.039383,
+   "window_lo": 0.05,
+   "window_hi": 0.175
+  },
+  {
+   "model": "RF",
+   "pair": "DF~PP",
+   "pos_gap": 0.248061,
+   "neg_gap": 0.007893,
+   "window_lo": 0.025,
+   "window_hi": 0.225
+  },
+  {
+   "model": "RF",
+   "pair": "DF~EXL_ASS",
+   "pos_gap": 0.121746,
+   "neg_gap": 0.024381,
+   "window_lo": 0.025,
+   "window_hi": 0.1
+  },
+  {
+   "model": "MLP",
+   "pair": "DF~PP",
+   "pos_gap": 0.282647,
+   "neg_gap": 0.001893,
+   "window_lo": 0.025,
+   "window_hi": 0.275
+  },
+  {
+   "model": "MLP",
+   "pair": "DF~EXL_ASS",
+   "pos_gap": 0.209074,
+   "neg_gap": 0.081796,
+   "window_lo": 0.1,
+   "window_hi": 0.2
+  }
+ ],
+ "r6_controlled": [
+  {
+   "model": "LR",
+   "scope": "value",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "LR",
+   "scope": "value",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "LR",
+   "scope": "value",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 6,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "LR",
+   "scope": "value",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 15,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "LR",
+   "scope": "artifact",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "LR",
+   "scope": "artifact",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "LR",
+   "scope": "artifact",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 5
+  },
+  {
+   "model": "LR",
+   "scope": "artifact",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 6
+  },
+  {
+   "model": "RF",
+   "scope": "value",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "RF",
+   "scope": "value",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "RF",
+   "scope": "value",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 6,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "RF",
+   "scope": "value",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 15,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "RF",
+   "scope": "artifact",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "RF",
+   "scope": "artifact",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "RF",
+   "scope": "artifact",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 5
+  },
+  {
+   "model": "RF",
+   "scope": "artifact",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 6
+  },
+  {
+   "model": "XGB",
+   "scope": "value",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "XGB",
+   "scope": "value",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "XGB",
+   "scope": "value",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 6,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "XGB",
+   "scope": "value",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 15,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "XGB",
+   "scope": "artifact",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "XGB",
+   "scope": "artifact",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "XGB",
+   "scope": "artifact",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 5
+  },
+  {
+   "model": "XGB",
+   "scope": "artifact",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 6
+  },
+  {
+   "model": "MLP",
+   "scope": "value",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "MLP",
+   "scope": "value",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "MLP",
+   "scope": "value",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 6,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "MLP",
+   "scope": "value",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 15,
+   "mean_unnecessary_reopenings": 0
+  },
+  {
+   "model": "MLP",
+   "scope": "artifact",
+   "scenario": "identity",
+   "actionable": 11,
+   "mutants": 1,
+   "correct_mutants": 1
+  },
+  {
+   "model": "MLP",
+   "scope": "artifact",
+   "scenario": "drop_each_disposition",
+   "actionable": 11,
+   "mutants": 11,
+   "correct_mutants": 11
+  },
+  {
+   "model": "MLP",
+   "scope": "artifact",
+   "scenario": "edit_one_low_support_row",
+   "actionable": 11,
+   "mutants": 6,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 5
+  },
+  {
+   "model": "MLP",
+   "scope": "artifact",
+   "scenario": "edit_unrelated_row_same_table",
+   "actionable": 11,
+   "mutants": 15,
+   "correct_mutants": 0,
+   "mean_unnecessary_reopenings": 6
+  }
+ ],
+ "r6_history": [
+  {
+   "commit": "3adbe3b",
+   "date": "2026-07-08",
+   "subject": "Complete TCGA BRCA XFAIR-MED pipeline with FDS",
+   "version": "v1",
+   "model": "LR",
+   "scope": "value",
+   "prior_decisions": 7,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 1
+  },
+  {
+   "commit": "3adbe3b",
+   "date": "2026-07-08",
+   "subject": "Complete TCGA BRCA XFAIR-MED pipeline with FDS",
+   "version": "v1",
+   "model": "LR",
+   "scope": "artifact",
+   "prior_decisions": 7,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 1
+  },
+  {
+   "commit": "2284200",
+   "date": "2026-07-09",
+   "subject": "Add Random Forest OOF model fairness audit",
+   "version": "v1",
+   "model": "LR",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 3,
+   "reopened_stale": 0,
+   "new_unresolved": 3,
+   "orphaned": 3
+  },
+  {
+   "commit": "2284200",
+   "date": "2026-07-09",
+   "subject": "Add Random Forest OOF model fairness audit",
+   "version": "v1",
+   "model": "LR",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 3,
+   "reopened_stale": 0,
+   "new_unresolved": 3,
+   "orphaned": 3
+  },
+  {
+   "commit": "60fdd4f",
+   "date": "2026-07-11",
+   "subject": "Add model agnostic EXL audit for Random Forest",
+   "version": "v1",
+   "model": "LR",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 0
+  },
+  {
+   "commit": "60fdd4f",
+   "date": "2026-07-11",
+   "subject": "Add model agnostic EXL audit for Random Forest",
+   "version": "v1",
+   "model": "LR",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 0
+  },
+  {
+   "commit": "60fdd4f",
+   "date": "2026-07-11",
+   "subject": "Add model agnostic EXL audit for Random Forest",
+   "version": "v1",
+   "model": "RF",
+   "scope": "value",
+   "prior_decisions": 11,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 5
+  },
+  {
+   "commit": "60fdd4f",
+   "date": "2026-07-11",
+   "subject": "Add model agnostic EXL audit for Random Forest",
+   "version": "v1",
+   "model": "RF",
+   "scope": "artifact",
+   "prior_decisions": 11,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 5
+  },
+  {
+   "commit": "3016ba3",
+   "date": "2026-07-11",
+   "subject": "Add MLP black box fairness audit",
+   "version": "v1",
+   "model": "LR",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 0
+  },
+  {
+   "commit": "3016ba3",
+   "date": "2026-07-11",
+   "subject": "Add MLP black box fairness audit",
+   "version": "v1",
+   "model": "LR",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 0
+  },
+  {
+   "commit": "3016ba3",
+   "date": "2026-07-11",
+   "subject": "Add MLP black box fairness audit",
+   "version": "v1",
+   "model": "RF",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 0
+  },
+  {
+   "commit": "3016ba3",
+   "date": "2026-07-11",
+   "subject": "Add MLP black box fairness audit",
+   "version": "v1",
+   "model": "RF",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 0,
+   "orphaned": 0
+  },
+  {
+   "commit": "e770113",
+   "date": "2026-07-11",
+   "subject": "update",
+   "version": "v1",
+   "model": "LR",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 6,
+   "orphaned": 0
+  },
+  {
+   "commit": "e770113",
+   "date": "2026-07-11",
+   "subject": "update",
+   "version": "v1",
+   "model": "LR",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 3,
+   "reopened_stale": 3,
+   "new_unresolved": 6,
+   "orphaned": 0
+  },
+  {
+   "commit": "e770113",
+   "date": "2026-07-11",
+   "subject": "update",
+   "version": "v1",
+   "model": "RF",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 6,
+   "orphaned": 0
+  },
+  {
+   "commit": "e770113",
+   "date": "2026-07-11",
+   "subject": "update",
+   "version": "v1",
+   "model": "RF",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 3,
+   "reopened_stale": 3,
+   "new_unresolved": 6,
+   "orphaned": 0
+  },
+  {
+   "commit": "e770113",
+   "date": "2026-07-11",
+   "subject": "update",
+   "version": "v1",
+   "model": "MLP",
+   "scope": "value",
+   "prior_decisions": 6,
+   "carried_over": 6,
+   "reopened_stale": 0,
+   "new_unresolved": 6,
+   "orphaned": 0
+  },
+  {
+   "commit": "e770113",
+   "date": "2026-07-11",
+   "subject": "update",
+   "version": "v1",
+   "model": "MLP",
+   "scope": "artifact",
+   "prior_decisions": 6,
+   "carried_over": 3,
+   "reopened_stale": 3,
+   "new_unresolved": 6,
+   "orphaned": 0
+  },
+  {
+   "commit": "53ab542",
+   "date": "2026-10-28",
+   "subject": "Toolkit v2: tuned 4-model 5x5 nested CV",
+   "version": "v2",
+   "model": "LR",
+   "scope": "value",
+   "prior_decisions": 12,
+   "carried_over": 0,
+   "reopened_stale": 9,
+   "new_unresolved": 2,
+   "orphaned": 3
+  },
+  {
+   "commit": "53ab542",
+   "date": "2026-10-28",
+   "subject": "Toolkit v2: tuned 4-model 5x5 nested CV",
+   "version": "v2",
+   "model": "LR",
+   "scope": "artifact",
+   "prior_decisions": 12,
+   "carried_over": 0,
+   "reopened_stale": 9,
+   "new_unresolved": 2,
+   "orphaned": 3
+  },
+  {
+   "commit": "53ab542",
+   "date": "2026-10-28",
+   "subject": "Toolkit v2: tuned 4-model 5x5 nested CV",
+   "version": "v2",
+   "model": "RF",
+   "scope": "value",
+   "prior_decisions": 12,
+   "carried_over": 0,
+   "reopened_stale": 9,
+   "new_unresolved": 2,
+   "orphaned": 3
+  },
+  {
+   "commit": "53ab542",
+   "date": "2026-10-28",
+   "subject": "Toolkit v2: tuned 4-model 5x5 nested CV",
+   "version": "v2",
+   "model": "RF",
+   "scope": "artifact",
+   "prior_decisions": 12,
+   "carried_over": 0,
+   "reopened_stale": 9,
+   "new_unresolved": 2,
+   "orphaned": 3
+  },
+  {
+   "commit": "53ab542",
+   "date": "2026-10-28",
+   "subject": "Toolkit v2: tuned 4-model 5x5 nested CV",
+   "version": "v2",
+   "model": "MLP",
+   "scope": "value",
+   "prior_decisions": 12,
+   "carried_over": 0,
+   "reopened_stale": 9,
+   "new_unresolved": 2,
+   "orphaned": 3
+  },
+  {
+   "commit": "53ab542",
+   "date": "2026-10-28",
+   "subject": "Toolkit v2: tuned 4-model 5x5 nested CV",
+   "version": "v2",
+   "model": "MLP",
+   "scope": "artifact",
+   "prior_decisions": 12,
+   "carried_over": 0,
+   "reopened_stale": 9,
+   "new_unresolved": 2,
+   "orphaned": 3
+  }
+ ],
+ "coverage": [
+  {
+   "model": "LR",
+   "items": 18,
+   "n_low_support": 6,
+   "n_parity_not_computable": 3,
+   "n_uncertainty": 1,
+   "n_exl_scope": 2,
+   "n_provenance": 6,
+   "T_A": 0.0,
+   "valid_A": 0,
+   "applicable_A": 99,
+   "T_B": 0.45454545454545453,
+   "valid_B": 45,
+   "applicable_B": 99,
+   "T_C": 1.0,
+   "valid_C": 99,
+   "applicable_C": 99
+  },
+  {
+   "model": "RF",
+   "items": 18,
+   "n_low_support": 6,
+   "n_parity_not_computable": 3,
+   "n_uncertainty": 1,
+   "n_exl_scope": 2,
+   "n_provenance": 6,
+   "T_A": 0.0,
+   "valid_A": 0,
+   "applicable_A": 99,
+   "T_B": 0.45454545454545453,
+   "valid_B": 45,
+   "applicable_B": 99,
+   "T_C": 1.0,
+   "valid_C": 99,
+   "applicable_C": 99
+  },
+  {
+   "model": "XGB",
+   "items": 18,
+   "n_low_support": 6,
+   "n_parity_not_computable": 3,
+   "n_uncertainty": 1,
+   "n_exl_scope": 2,
+   "n_provenance": 6,
+   "T_A": 0.0,
+   "valid_A": 0,
+   "applicable_A": 99,
+   "T_B": 0.45454545454545453,
+   "valid_B": 45,
+   "applicable_B": 99,
+   "T_C": 1.0,
+   "valid_C": 99,
+   "applicable_C": 99
+  },
+  {
+   "model": "MLP",
+   "items": 18,
+   "n_low_support": 6,
+   "n_parity_not_computable": 3,
+   "n_uncertainty": 1,
+   "n_exl_scope": 2,
+   "n_provenance": 6,
+   "T_A": 0.0,
+   "valid_A": 0,
+   "applicable_A": 99,
+   "T_B": 0.45454545454545453,
+   "valid_B": 45,
+   "applicable_B": 99,
+   "T_C": 1.0,
+   "valid_C": 99,
+   "applicable_C": 99
+  }
+ ],
+ "floor": [
+  {
+   "min_class": 5,
+   "min_total": 35,
+   "under_supported": 2,
+   "attributes_without_parity": 0
+  },
+  {
+   "min_class": 10,
+   "min_total": 35,
+   "under_supported": 6,
+   "attributes_without_parity": 3
+  },
+  {
+   "min_class": 15,
+   "min_total": 35,
+   "under_supported": 7,
+   "attributes_without_parity": 4
+  },
+  {
+   "min_class": 20,
+   "min_total": 35,
+   "under_supported": 7,
+   "attributes_without_parity": 4
+  },
+  {
+   "min_class": 30,
+   "min_total": 35,
+   "under_supported": 8,
+   "attributes_without_parity": 5
+  }
+ ],
+ "timing": [
+  {
+   "model": "LR",
+   "bundle_bytes": 42800,
+   "artifacts": 19,
+   "t_B_ms_median": 0.4358660000036707,
+   "t_C_ms_median": 4.08353649999782,
+   "delta_t_ms_median": 3.647670499994149,
+   "t_C_ms_p95": 5.610963000009406,
+   "identical_output": true
+  },
+  {
+   "model": "RF",
+   "bundle_bytes": 42497,
+   "artifacts": 19,
+   "t_B_ms_median": 0.4089819999961719,
+   "t_C_ms_median": 4.009834000001433,
+   "delta_t_ms_median": 3.6008520000052613,
+   "t_C_ms_p95": 6.637520000012387,
+   "identical_output": true
+  },
+  {
+   "model": "XGB",
+   "bundle_bytes": 42193,
+   "artifacts": 19,
+   "t_B_ms_median": 0.5859009999937825,
+   "t_C_ms_median": 6.097891999999661,
+   "delta_t_ms_median": 5.511991000005878,
+   "t_C_ms_p95": 6.948969000006855,
+   "identical_output": true
+  },
+  {
+   "model": "MLP",
+   "bundle_bytes": 41990,
+   "artifacts": 19,
+   "t_B_ms_median": 0.37617349999408134,
+   "t_C_ms_median": 3.8432565000050545,
+   "delta_t_ms_median": 3.467083000010973,
+   "t_C_ms_p95": 7.230309000007651,
+   "identical_output": true
+  }
+ ]
+}

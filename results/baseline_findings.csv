@@ -1,0 +1,405 @@
+cohort,model,rule,outcome,kind,attribute,subgroup,key,message
+real_v2,LR,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v2,LR,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v2,LR,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v2,LR,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v2,LR,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,LR,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,LR,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: TP53_mut.
+real_v2,LR,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: GATA3_mut.
+real_v2,LR,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v2,LR,R2,OBSERVED,interval_not_approved,,,U:ASS:not_approved,ASS intervals are declared not approved for confidence-interval reporting (all 6 candidate interval methods failed calibration); point estimates are descriptive only.
+real_v2,LR,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,LR,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,LR,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.977 for `audit_CDH1_mut_status` (|gap|=0.608; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.971 for `audit_ECadherin_low_status` (|gap|=0.491; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.926 for `audit_ER_Status` (|gap|=0.393; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.937 for `audit_HER2_Final_Status` (|gap|=0.424; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.982 for `audit_PIK3CA_mut_status` (|gap|=0.332; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.903 for `audit_PR_Status` (|gap|=0.324; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,LR,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.828 for `audit_CDH1_mut_status` (|gap|=0.459; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.867 for `audit_ECadherin_low_status` (|gap|=0.386; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.878 for `audit_ER_Status` (|gap|=0.345; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.873 for `audit_HER2_Final_Status` (|gap|=0.360; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.887 for `audit_PIK3CA_mut_status` (|gap|=0.236; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.874 for `audit_PR_Status` (|gap|=0.295; no pre-registered threshold).
+real_v2,LR,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,LR,R5,OBSERVED,declared_unverified,,,claim:downloadable_original_csv_bitwise_identity_confirmed,Provenance claim `downloadable_original_csv_bitwise_identity_confirmed` is declared unverified.
+real_v2,LR,R5,OBSERVED,declared_unverified,,,claim:local_row_to_unique_patient_mapping_independently_confirmed,Provenance claim `local_row_to_unique_patient_mapping_independently_confirmed` is declared unverified.
+real_v2,LR,R5,OBSERVED,declared_unverified,,,claim:modality_merge_provenance_verified,Provenance claim `modality_merge_provenance_verified` is declared unverified.
+real_v2,LR,R5,OBSERVED,declared_unverified,,,claim:original_patient_barcodes_investigated,Provenance claim `original_patient_barcodes_investigated` is declared unverified.
+real_v2,LR,R5,REVIEW,open_gate,,,gate:definitive_training,Provenance gate `definitive_training` is open: BLOCKED_PENDING_UPSTREAM_PROVENANCE_REVIEW_AND_V2_TRAINING_ENVIRONMENT_WEIGHTING_AND_RUNNER_TESTS.
+real_v2,LR,R5,REVIEW,open_gate,,,gate:source_to_local_bitwise_traceability,Provenance gate `source_to_local_bitwise_traceability` is open: PENDING_NO_ORIGINAL_KAGGLE_HASH_AVAILABLE.
+real_v2,LR,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-f3883ac7fe,R2 finding `R2-f3883ac7fe` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-3bae68d595,R2 finding `R2-3bae68d595` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-b0cbaa034c,R2 finding `R2-b0cbaa034c` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-11d77c1c6a,R2 finding `R2-11d77c1c6a` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-d3d7704844,R2 finding `R2-d3d7704844` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-78e2006424,R2 finding `R2-78e2006424` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-9814eb81c8,R2 finding `R2-9814eb81c8` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-d4aa4b1630,R2 finding `R2-d4aa4b1630` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-50b804fb79,R2 finding `R2-50b804fb79` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,,,R5-d2aa88ad4b,R5 finding `R5-d2aa88ad4b` has no recorded disposition.
+real_v2,LR,R6,REVIEW,unresolved,,,R5-0691ae1282,R5 finding `R5-0691ae1282` has no recorded disposition.
+real_v2,RF,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v2,RF,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v2,RF,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v2,RF,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v2,RF,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,RF,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,RF,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: TP53_mut.
+real_v2,RF,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: GATA3_mut.
+real_v2,RF,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v2,RF,R2,OBSERVED,interval_not_approved,,,U:ASS:not_approved,ASS intervals are declared not approved for confidence-interval reporting (all 6 candidate interval methods failed calibration); point estimates are descriptive only.
+real_v2,RF,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,RF,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,RF,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.958 for `audit_CDH1_mut_status` (|gap|=0.589; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.888 for `audit_ECadherin_low_status` (|gap|=0.408; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.947 for `audit_ER_Status` (|gap|=0.414; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.950 for `audit_HER2_Final_Status` (|gap|=0.436; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.980 for `audit_PIK3CA_mut_status` (|gap|=0.330; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.961 for `audit_PR_Status` (|gap|=0.382; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,RF,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.668 for `audit_CDH1_mut_status` (|gap|=0.298; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.635 for `audit_ECadherin_low_status` (|gap|=0.154; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.857 for `audit_ER_Status` (|gap|=0.324; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.848 for `audit_HER2_Final_Status` (|gap|=0.334; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.862 for `audit_PIK3CA_mut_status` (|gap|=0.211; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.860 for `audit_PR_Status` (|gap|=0.280; no pre-registered threshold).
+real_v2,RF,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,RF,R5,OBSERVED,declared_unverified,,,claim:downloadable_original_csv_bitwise_identity_confirmed,Provenance claim `downloadable_original_csv_bitwise_identity_confirmed` is declared unverified.
+real_v2,RF,R5,OBSERVED,declared_unverified,,,claim:local_row_to_unique_patient_mapping_independently_confirmed,Provenance claim `local_row_to_unique_patient_mapping_independently_confirmed` is declared unverified.
+real_v2,RF,R5,OBSERVED,declared_unverified,,,claim:modality_merge_provenance_verified,Provenance claim `modality_merge_provenance_verified` is declared unverified.
+real_v2,RF,R5,OBSERVED,declared_unverified,,,claim:original_patient_barcodes_investigated,Provenance claim `original_patient_barcodes_investigated` is declared unverified.
+real_v2,RF,R5,REVIEW,open_gate,,,gate:definitive_training,Provenance gate `definitive_training` is open: BLOCKED_PENDING_UPSTREAM_PROVENANCE_REVIEW_AND_V2_TRAINING_ENVIRONMENT_WEIGHTING_AND_RUNNER_TESTS.
+real_v2,RF,R5,REVIEW,open_gate,,,gate:source_to_local_bitwise_traceability,Provenance gate `source_to_local_bitwise_traceability` is open: PENDING_NO_ORIGINAL_KAGGLE_HASH_AVAILABLE.
+real_v2,RF,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-265b9a6a5a,R2 finding `R2-265b9a6a5a` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-385046dfdb,R2 finding `R2-385046dfdb` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-41528c0a58,R2 finding `R2-41528c0a58` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-386731302d,R2 finding `R2-386731302d` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-73a7b42ab6,R2 finding `R2-73a7b42ab6` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-f028f4205d,R2 finding `R2-f028f4205d` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-7d9cc3fef8,R2 finding `R2-7d9cc3fef8` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-d98b14d9c7,R2 finding `R2-d98b14d9c7` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-58bb7ba403,R2 finding `R2-58bb7ba403` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,,,R5-f49299bfcd,R5 finding `R5-f49299bfcd` has no recorded disposition.
+real_v2,RF,R6,REVIEW,unresolved,,,R5-efa6069d6e,R5 finding `R5-efa6069d6e` has no recorded disposition.
+real_v2,XGB,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v2,XGB,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v2,XGB,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v2,XGB,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v2,XGB,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,XGB,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,XGB,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: TP53_mut.
+real_v2,XGB,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: GATA3_mut.
+real_v2,XGB,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v2,XGB,R2,OBSERVED,interval_not_approved,,,U:ASS:not_approved,ASS intervals are declared not approved for confidence-interval reporting (all 6 candidate interval methods failed calibration); point estimates are descriptive only.
+real_v2,XGB,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,XGB,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,XGB,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.926 for `audit_CDH1_mut_status` (|gap|=0.556; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.873 for `audit_ECadherin_low_status` (|gap|=0.393; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.962 for `audit_ER_Status` (|gap|=0.429; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.967 for `audit_HER2_Final_Status` (|gap|=0.454; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.985 for `audit_PIK3CA_mut_status` (|gap|=0.334; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.972 for `audit_PR_Status` (|gap|=0.393; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,XGB,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.710 for `audit_CDH1_mut_status` (|gap|=0.340; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.668 for `audit_ECadherin_low_status` (|gap|=0.188; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.825 for `audit_ER_Status` (|gap|=0.292; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.809 for `audit_HER2_Final_Status` (|gap|=0.295; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.837 for `audit_PIK3CA_mut_status` (|gap|=0.186; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.825 for `audit_PR_Status` (|gap|=0.245; no pre-registered threshold).
+real_v2,XGB,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,XGB,R5,OBSERVED,declared_unverified,,,claim:downloadable_original_csv_bitwise_identity_confirmed,Provenance claim `downloadable_original_csv_bitwise_identity_confirmed` is declared unverified.
+real_v2,XGB,R5,OBSERVED,declared_unverified,,,claim:local_row_to_unique_patient_mapping_independently_confirmed,Provenance claim `local_row_to_unique_patient_mapping_independently_confirmed` is declared unverified.
+real_v2,XGB,R5,OBSERVED,declared_unverified,,,claim:modality_merge_provenance_verified,Provenance claim `modality_merge_provenance_verified` is declared unverified.
+real_v2,XGB,R5,OBSERVED,declared_unverified,,,claim:original_patient_barcodes_investigated,Provenance claim `original_patient_barcodes_investigated` is declared unverified.
+real_v2,XGB,R5,REVIEW,open_gate,,,gate:definitive_training,Provenance gate `definitive_training` is open: BLOCKED_PENDING_UPSTREAM_PROVENANCE_REVIEW_AND_V2_TRAINING_ENVIRONMENT_WEIGHTING_AND_RUNNER_TESTS.
+real_v2,XGB,R5,REVIEW,open_gate,,,gate:source_to_local_bitwise_traceability,Provenance gate `source_to_local_bitwise_traceability` is open: PENDING_NO_ORIGINAL_KAGGLE_HASH_AVAILABLE.
+real_v2,XGB,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-b2f3d87ce0,R2 finding `R2-b2f3d87ce0` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-7cdbaa3fa6,R2 finding `R2-7cdbaa3fa6` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-60a28f9b0f,R2 finding `R2-60a28f9b0f` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-ad434d3194,R2 finding `R2-ad434d3194` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-01fb57d0e5,R2 finding `R2-01fb57d0e5` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-5d4c857e22,R2 finding `R2-5d4c857e22` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-7a6e1c9e40,R2 finding `R2-7a6e1c9e40` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-df3e8affc6,R2 finding `R2-df3e8affc6` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-59b54f8a16,R2 finding `R2-59b54f8a16` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,,,R5-598729f043,R5 finding `R5-598729f043` has no recorded disposition.
+real_v2,XGB,R6,REVIEW,unresolved,,,R5-08b20282ab,R5 finding `R5-08b20282ab` has no recorded disposition.
+real_v2,MLP,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v2,MLP,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v2,MLP,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v2,MLP,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v2,MLP,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,MLP,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v2,MLP,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: TP53_mut.
+real_v2,MLP,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: GATA3_mut.
+real_v2,MLP,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two). Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v2,MLP,R2,OBSERVED,interval_not_approved,,,U:ASS:not_approved,ASS intervals are declared not approved for confidence-interval reporting (all 6 candidate interval methods failed calibration); point estimates are descriptive only.
+real_v2,MLP,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,MLP,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes are excluded from the model inputs (leakage-safe cohort). EXL is reported as partial.
+real_v2,MLP,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.979 for `audit_CDH1_mut_status` (|gap|=0.610; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.945 for `audit_ECadherin_low_status` (|gap|=0.465; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.961 for `audit_ER_Status` (|gap|=0.428; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.975 for `audit_HER2_Final_Status` (|gap|=0.461; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.973 for `audit_PIK3CA_mut_status` (|gap|=0.322; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.943 for `audit_PR_Status` (|gap|=0.363; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,MLP,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.814 for `audit_CDH1_mut_status` (|gap|=0.444; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.863 for `audit_ECadherin_low_status` (|gap|=0.383; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.873 for `audit_ER_Status` (|gap|=0.341; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.875 for `audit_HER2_Final_Status` (|gap|=0.362; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.885 for `audit_PIK3CA_mut_status` (|gap|=0.234; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.870 for `audit_PR_Status` (|gap|=0.291; no pre-registered threshold).
+real_v2,MLP,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~EXL_ASS,DF vs EXL_ASS for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v2,MLP,R5,OBSERVED,declared_unverified,,,claim:downloadable_original_csv_bitwise_identity_confirmed,Provenance claim `downloadable_original_csv_bitwise_identity_confirmed` is declared unverified.
+real_v2,MLP,R5,OBSERVED,declared_unverified,,,claim:local_row_to_unique_patient_mapping_independently_confirmed,Provenance claim `local_row_to_unique_patient_mapping_independently_confirmed` is declared unverified.
+real_v2,MLP,R5,OBSERVED,declared_unverified,,,claim:modality_merge_provenance_verified,Provenance claim `modality_merge_provenance_verified` is declared unverified.
+real_v2,MLP,R5,OBSERVED,declared_unverified,,,claim:original_patient_barcodes_investigated,Provenance claim `original_patient_barcodes_investigated` is declared unverified.
+real_v2,MLP,R5,REVIEW,open_gate,,,gate:definitive_training,Provenance gate `definitive_training` is open: BLOCKED_PENDING_UPSTREAM_PROVENANCE_REVIEW_AND_V2_TRAINING_ENVIRONMENT_WEIGHTING_AND_RUNNER_TESTS.
+real_v2,MLP,R5,REVIEW,open_gate,,,gate:source_to_local_bitwise_traceability,Provenance gate `source_to_local_bitwise_traceability` is open: PENDING_NO_ORIGINAL_KAGGLE_HASH_AVAILABLE.
+real_v2,MLP,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-8b28782259,R2 finding `R2-8b28782259` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-55e3a58f43,R2 finding `R2-55e3a58f43` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-16740d9473,R2 finding `R2-16740d9473` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-737f71a6be,R2 finding `R2-737f71a6be` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-3950c539fb,R2 finding `R2-3950c539fb` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-dc7f2ccf06,R2 finding `R2-dc7f2ccf06` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-3d3ec43e70,R2 finding `R2-3d3ec43e70` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-6ffb9b2742,R2 finding `R2-6ffb9b2742` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-bc4aef2541,R2 finding `R2-bc4aef2541` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,,,R5-08184599c7,R5 finding `R5-08184599c7` has no recorded disposition.
+real_v2,MLP,R6,REVIEW,unresolved,,,R5-169a7e437d,R5 finding `R5-169a7e437d` has no recorded disposition.
+semi_synthetic,LR,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+semi_synthetic,LR,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF=0.692 vs PP=0.935 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.242; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.598 vs PP=0.953 for `audit_CDH1_mut_status` (|gap|=0.355; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.585 vs PP=0.961 for `audit_ECadherin_low_status` (|gap|=0.376; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.708 vs PP=0.959 for `audit_ER_Status` (|gap|=0.251; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~PP,DF=0.739 vs PP=1.000 for `audit_GATA3_mut_status` (|gap|=0.260; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.830 vs PP=0.974 for `audit_HER2_Final_Status` (|gap|=0.144; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.699 vs PP=0.996 for `audit_PIK3CA_mut_status` (|gap|=0.297; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.710 vs PP=0.983 for `audit_PR_Status` (|gap|=0.272; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~PP,DF=0.702 vs PP=0.973 for `audit_TP53_mut_status` (|gap|=0.271; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_method_control_status,,DF~PP,DF=0.988 vs PP=0.994 for `audit_method_control_status` (|gap|=0.006; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF=0.692 vs EXL_ASS=0.888 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.196; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.598 vs EXL_ASS=0.896 for `audit_CDH1_mut_status` (|gap|=0.298; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.585 vs EXL_ASS=0.902 for `audit_ECadherin_low_status` (|gap|=0.317; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.708 vs EXL_ASS=0.928 for `audit_ER_Status` (|gap|=0.221; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~EXL_ASS,DF=0.739 vs EXL_ASS=0.939 for `audit_GATA3_mut_status` (|gap|=0.200; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.830 vs EXL_ASS=0.933 for `audit_HER2_Final_Status` (|gap|=0.103; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.699 vs EXL_ASS=0.932 for `audit_PIK3CA_mut_status` (|gap|=0.234; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.710 vs EXL_ASS=0.935 for `audit_PR_Status` (|gap|=0.225; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~EXL_ASS,DF=0.702 vs EXL_ASS=0.942 for `audit_TP53_mut_status` (|gap|=0.240; no pre-registered threshold).
+semi_synthetic,LR,R4,OBSERVED,gap_recorded,audit_method_control_status,,DF~EXL_ASS,DF=0.988 vs EXL_ASS=0.949 for `audit_method_control_status` (|gap|=0.039; no pre-registered threshold).
+semi_synthetic,LR,R5,INCOMPLETE,missing_provenance,,,dataset_release,Provenance field `dataset_release` is not recorded.
+semi_synthetic,LR,R5,INCOMPLETE,missing_provenance,,,dataset_sha256,Provenance field `dataset_sha256` is not recorded.
+semi_synthetic,LR,R5,INCOMPLETE,missing_provenance,,,environment_lock,Provenance field `environment_lock` is not recorded.
+semi_synthetic,LR,R6,REVIEW,unresolved,,,R5-e87c22cc42,R5 finding `R5-e87c22cc42` has no recorded disposition.
+semi_synthetic,LR,R6,REVIEW,unresolved,,,R5-03aac4ce2d,R5 finding `R5-03aac4ce2d` has no recorded disposition.
+semi_synthetic,LR,R6,REVIEW,unresolved,,,R5-8c5ee7b7f6,R5 finding `R5-8c5ee7b7f6` has no recorded disposition.
+real_v1,LR,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v1,LR,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v1,LR,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v1,LR,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v1,LR,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v1,LR,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v1,LR,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: Less than two supported groups available. Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v1,LR,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: Less than two supported groups available. Excluded: GATA3_mut.
+real_v1,LR,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: Less than two supported groups available. Excluded: TP53_mut.
+real_v1,LR,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+real_v1,LR,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+real_v1,LR,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.833 for `audit_CDH1_mut_status` (|gap|=0.464; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.982 for `audit_ECadherin_low_status` (|gap|=0.501; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.913 for `audit_ER_Status` (|gap|=0.381; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.920 for `audit_HER2_Final_Status` (|gap|=0.407; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.952 for `audit_PIK3CA_mut_status` (|gap|=0.302; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.891 for `audit_PR_Status` (|gap|=0.312; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF=0.613 vs EXL_ASS=0.940 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.326; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.879 for `audit_CDH1_mut_status` (|gap|=0.510; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.915 for `audit_ECadherin_low_status` (|gap|=0.434; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.912 for `audit_ER_Status` (|gap|=0.379; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~EXL_ASS,DF=0.523 vs EXL_ASS=0.916 for `audit_GATA3_mut_status` (|gap|=0.394; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.915 for `audit_HER2_Final_Status` (|gap|=0.401; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.943 for `audit_PIK3CA_mut_status` (|gap|=0.292; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.921 for `audit_PR_Status` (|gap|=0.341; no pre-registered threshold).
+real_v1,LR,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~EXL_ASS,DF=0.603 vs EXL_ASS=0.907 for `audit_TP53_mut_status` (|gap|=0.304; no pre-registered threshold).
+real_v1,LR,R5,INCOMPLETE,missing_provenance,,,dataset_release,Provenance field `dataset_release` is not recorded.
+real_v1,LR,R5,INCOMPLETE,missing_provenance,,,dataset_sha256,Provenance field `dataset_sha256` is not recorded.
+real_v1,LR,R5,INCOMPLETE,missing_provenance,,,environment_lock,Provenance field `environment_lock` is not recorded.
+real_v1,LR,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-f3883ac7fe,R2 finding `R2-f3883ac7fe` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-3bae68d595,R2 finding `R2-3bae68d595` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-b0cbaa034c,R2 finding `R2-b0cbaa034c` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-11d77c1c6a,R2 finding `R2-11d77c1c6a` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-d3d7704844,R2 finding `R2-d3d7704844` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-78e2006424,R2 finding `R2-78e2006424` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-50b804fb79,R2 finding `R2-50b804fb79` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-d4aa4b1630,R2 finding `R2-d4aa4b1630` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-9814eb81c8,R2 finding `R2-9814eb81c8` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,,,R5-e87c22cc42,R5 finding `R5-e87c22cc42` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,,,R5-03aac4ce2d,R5 finding `R5-03aac4ce2d` has no recorded disposition.
+real_v1,LR,R6,REVIEW,unresolved,,,R5-8c5ee7b7f6,R5 finding `R5-8c5ee7b7f6` has no recorded disposition.
+semi_synthetic,RF,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+semi_synthetic,RF,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF=0.692 vs PP=0.940 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.248; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.598 vs PP=0.963 for `audit_CDH1_mut_status` (|gap|=0.365; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.585 vs PP=0.967 for `audit_ECadherin_low_status` (|gap|=0.382; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.708 vs PP=0.962 for `audit_ER_Status` (|gap|=0.254; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~PP,DF=0.739 vs PP=0.998 for `audit_GATA3_mut_status` (|gap|=0.259; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.830 vs PP=0.988 for `audit_HER2_Final_Status` (|gap|=0.159; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.699 vs PP=0.957 for `audit_PIK3CA_mut_status` (|gap|=0.258; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.710 vs PP=0.941 for `audit_PR_Status` (|gap|=0.231; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~PP,DF=0.702 vs PP=0.993 for `audit_TP53_mut_status` (|gap|=0.291; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_method_control_status,,DF~PP,DF=0.988 vs PP=0.980 for `audit_method_control_status` (|gap|=0.008; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF=0.692 vs EXL_ASS=0.814 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.122; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.598 vs EXL_ASS=0.848 for `audit_CDH1_mut_status` (|gap|=0.250; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.585 vs EXL_ASS=0.845 for `audit_ECadherin_low_status` (|gap|=0.260; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.708 vs EXL_ASS=0.927 for `audit_ER_Status` (|gap|=0.220; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~EXL_ASS,DF=0.739 vs EXL_ASS=0.925 for `audit_GATA3_mut_status` (|gap|=0.186; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.830 vs EXL_ASS=0.945 for `audit_HER2_Final_Status` (|gap|=0.115; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.699 vs EXL_ASS=0.921 for `audit_PIK3CA_mut_status` (|gap|=0.223; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.710 vs EXL_ASS=0.942 for `audit_PR_Status` (|gap|=0.231; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~EXL_ASS,DF=0.702 vs EXL_ASS=0.928 for `audit_TP53_mut_status` (|gap|=0.226; no pre-registered threshold).
+semi_synthetic,RF,R4,OBSERVED,gap_recorded,audit_method_control_status,,DF~EXL_ASS,DF=0.988 vs EXL_ASS=0.964 for `audit_method_control_status` (|gap|=0.024; no pre-registered threshold).
+semi_synthetic,RF,R5,INCOMPLETE,missing_provenance,,,dataset_release,Provenance field `dataset_release` is not recorded.
+semi_synthetic,RF,R5,INCOMPLETE,missing_provenance,,,dataset_sha256,Provenance field `dataset_sha256` is not recorded.
+semi_synthetic,RF,R5,INCOMPLETE,missing_provenance,,,environment_lock,Provenance field `environment_lock` is not recorded.
+semi_synthetic,RF,R6,REVIEW,unresolved,,,R5-4cd49c3689,R5 finding `R5-4cd49c3689` has no recorded disposition.
+semi_synthetic,RF,R6,REVIEW,unresolved,,,R5-82027eb462,R5 finding `R5-82027eb462` has no recorded disposition.
+semi_synthetic,RF,R6,REVIEW,unresolved,,,R5-3c7c53e329,R5 finding `R5-3c7c53e329` has no recorded disposition.
+real_v1,RF,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v1,RF,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v1,RF,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v1,RF,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v1,RF,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v1,RF,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v1,RF,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: Less than two supported groups available. Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v1,RF,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: Less than two supported groups available. Excluded: GATA3_mut.
+real_v1,RF,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: Less than two supported groups available. Excluded: TP53_mut.
+real_v1,RF,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+real_v1,RF,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+real_v1,RF,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.918 for `audit_CDH1_mut_status` (|gap|=0.549; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.898 for `audit_ECadherin_low_status` (|gap|=0.417; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.983 for `audit_ER_Status` (|gap|=0.450; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.976 for `audit_HER2_Final_Status` (|gap|=0.463; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.986 for `audit_PIK3CA_mut_status` (|gap|=0.336; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.997 for `audit_PR_Status` (|gap|=0.417; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF=0.613 vs EXL_ASS=0.774 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.161; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.742 for `audit_CDH1_mut_status` (|gap|=0.373; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.776 for `audit_ECadherin_low_status` (|gap|=0.296; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.775 for `audit_ER_Status` (|gap|=0.243; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~EXL_ASS,DF=0.523 vs EXL_ASS=0.855 for `audit_GATA3_mut_status` (|gap|=0.332; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.839 for `audit_HER2_Final_Status` (|gap|=0.326; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.886 for `audit_PIK3CA_mut_status` (|gap|=0.235; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.810 for `audit_PR_Status` (|gap|=0.231; no pre-registered threshold).
+real_v1,RF,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~EXL_ASS,DF=0.603 vs EXL_ASS=0.755 for `audit_TP53_mut_status` (|gap|=0.152; no pre-registered threshold).
+real_v1,RF,R5,INCOMPLETE,missing_provenance,,,dataset_release,Provenance field `dataset_release` is not recorded.
+real_v1,RF,R5,INCOMPLETE,missing_provenance,,,dataset_sha256,Provenance field `dataset_sha256` is not recorded.
+real_v1,RF,R5,INCOMPLETE,missing_provenance,,,environment_lock,Provenance field `environment_lock` is not recorded.
+real_v1,RF,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-265b9a6a5a,R2 finding `R2-265b9a6a5a` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-385046dfdb,R2 finding `R2-385046dfdb` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-41528c0a58,R2 finding `R2-41528c0a58` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-386731302d,R2 finding `R2-386731302d` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-73a7b42ab6,R2 finding `R2-73a7b42ab6` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-f028f4205d,R2 finding `R2-f028f4205d` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-58bb7ba403,R2 finding `R2-58bb7ba403` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-d98b14d9c7,R2 finding `R2-d98b14d9c7` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-7d9cc3fef8,R2 finding `R2-7d9cc3fef8` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,,,R5-4cd49c3689,R5 finding `R5-4cd49c3689` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,,,R5-82027eb462,R5 finding `R5-82027eb462` has no recorded disposition.
+real_v1,RF,R6,REVIEW,unresolved,,,R5-3c7c53e329,R5 finding `R5-3c7c53e329` has no recorded disposition.
+semi_synthetic,MLP,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+semi_synthetic,MLP,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF=0.692 vs PP=0.975 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.283; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.598 vs PP=0.986 for `audit_CDH1_mut_status` (|gap|=0.388; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.585 vs PP=0.988 for `audit_ECadherin_low_status` (|gap|=0.403; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.708 vs PP=0.981 for `audit_ER_Status` (|gap|=0.273; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~PP,DF=0.739 vs PP=0.986 for `audit_GATA3_mut_status` (|gap|=0.247; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.830 vs PP=0.987 for `audit_HER2_Final_Status` (|gap|=0.157; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.699 vs PP=0.981 for `audit_PIK3CA_mut_status` (|gap|=0.283; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.710 vs PP=0.961 for `audit_PR_Status` (|gap|=0.251; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~PP,DF=0.702 vs PP=0.992 for `audit_TP53_mut_status` (|gap|=0.291; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_method_control_status,,DF~PP,DF=0.988 vs PP=0.986 for `audit_method_control_status` (|gap|=0.002; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF=0.692 vs EXL_ASS=0.901 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.209; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.598 vs EXL_ASS=0.903 for `audit_CDH1_mut_status` (|gap|=0.305; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.585 vs EXL_ASS=0.904 for `audit_ECadherin_low_status` (|gap|=0.319; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.708 vs EXL_ASS=0.885 for `audit_ER_Status` (|gap|=0.177; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~EXL_ASS,DF=0.739 vs EXL_ASS=0.919 for `audit_GATA3_mut_status` (|gap|=0.180; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.830 vs EXL_ASS=0.892 for `audit_HER2_Final_Status` (|gap|=0.062; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.699 vs EXL_ASS=0.920 for `audit_PIK3CA_mut_status` (|gap|=0.221; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.710 vs EXL_ASS=0.896 for `audit_PR_Status` (|gap|=0.186; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~EXL_ASS,DF=0.702 vs EXL_ASS=0.913 for `audit_TP53_mut_status` (|gap|=0.211; no pre-registered threshold).
+semi_synthetic,MLP,R4,OBSERVED,gap_recorded,audit_method_control_status,,DF~EXL_ASS,DF=0.988 vs EXL_ASS=0.906 for `audit_method_control_status` (|gap|=0.082; no pre-registered threshold).
+semi_synthetic,MLP,R5,INCOMPLETE,missing_provenance,,,dataset_release,Provenance field `dataset_release` is not recorded.
+semi_synthetic,MLP,R5,INCOMPLETE,missing_provenance,,,dataset_sha256,Provenance field `dataset_sha256` is not recorded.
+semi_synthetic,MLP,R5,INCOMPLETE,missing_provenance,,,environment_lock,Provenance field `environment_lock` is not recorded.
+semi_synthetic,MLP,R6,REVIEW,unresolved,,,R5-3b82d19c9b,R5 finding `R5-3b82d19c9b` has no recorded disposition.
+semi_synthetic,MLP,R6,REVIEW,unresolved,,,R5-3bb70c7031,R5 finding `R5-3bb70c7031` has no recorded disposition.
+semi_synthetic,MLP,R6,REVIEW,unresolved,,,R5-02145f2b7d,R5 finding `R5-02145f2b7d` has no recorded disposition.
+real_v1,MLP,R2,REVIEW,low_support,audit_ER_Status,Negative,support,Subgroup `audit_ER_Status=Negative` has insufficient support (minority class 3 < 10). It is excluded from the parity comparison.
+real_v1,MLP,R2,REVIEW,low_support,audit_PR_Status,Negative,support,Subgroup `audit_PR_Status=Negative` has insufficient support (minority class 9 < 10). It is excluded from the parity comparison.
+real_v1,MLP,R2,REVIEW,low_support,audit_HER2_Final_Status,Positive,support,Subgroup `audit_HER2_Final_Status=Positive` has insufficient support (minority class 2 < 10). It is excluded from the parity comparison.
+real_v1,MLP,R2,REVIEW,low_support,audit_TP53_mut_status,TP53_mut,support,Subgroup `audit_TP53_mut_status=TP53_mut` has insufficient support (minority class 8 < 10). It is excluded from the parity comparison.
+real_v1,MLP,R2,REVIEW,low_support,audit_GATA3_mut_status,GATA3_mut,support,Subgroup `audit_GATA3_mut_status=GATA3_mut` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v1,MLP,R2,REVIEW,low_support,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,support,Subgroup `audit_CDH1_ECadherin_disruption_status=CDH1_Ecadherin_not_disrupted_proxy` has insufficient support (minority class 6 < 10). It is excluded from the parity comparison.
+real_v1,MLP,R2,REVIEW,parity_not_computable,audit_CDH1_ECadherin_disruption_status,,parity_coverage,Model-layer parity for `audit_CDH1_ECadherin_disruption_status` was not computed: Less than two supported groups available. Excluded: CDH1_Ecadherin_not_disrupted_proxy.
+real_v1,MLP,R2,REVIEW,parity_not_computable,audit_GATA3_mut_status,,parity_coverage,Model-layer parity for `audit_GATA3_mut_status` was not computed: Less than two supported groups available. Excluded: GATA3_mut.
+real_v1,MLP,R2,REVIEW,parity_not_computable,audit_TP53_mut_status,,parity_coverage,Model-layer parity for `audit_TP53_mut_status` was not computed: Less than two supported groups available. Excluded: TP53_mut.
+real_v1,MLP,R3,OBSERVED,declared_limitation,,,SAS,`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+real_v1,MLP,R3,OBSERVED,declared_limitation,,,CSD,`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.
+real_v1,MLP,R4,OBSERVED,not_comparable,audit_CDH1_ECadherin_disruption_status,,DF~PP,DF vs PP for `audit_CDH1_ECadherin_disruption_status` not comparable: one layer has no value.
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~PP,DF=0.369 vs PP=0.904 for `audit_CDH1_mut_status` (|gap|=0.535; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~PP,DF=0.480 vs PP=0.972 for `audit_ECadherin_low_status` (|gap|=0.492; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~PP,DF=0.533 vs PP=0.838 for `audit_ER_Status` (|gap|=0.306; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,not_comparable,audit_GATA3_mut_status,,DF~PP,DF vs PP for `audit_GATA3_mut_status` not comparable: one layer has no value.
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~PP,DF=0.514 vs PP=0.866 for `audit_HER2_Final_Status` (|gap|=0.352; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~PP,DF=0.651 vs PP=0.938 for `audit_PIK3CA_mut_status` (|gap|=0.287; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~PP,DF=0.579 vs PP=0.812 for `audit_PR_Status` (|gap|=0.232; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,not_comparable,audit_TP53_mut_status,,DF~PP,DF vs PP for `audit_TP53_mut_status` not comparable: one layer has no value.
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_ECadherin_disruption_status,,DF~EXL_ASS,DF=0.613 vs EXL_ASS=0.765 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.152; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_CDH1_mut_status,,DF~EXL_ASS,DF=0.369 vs EXL_ASS=0.840 for `audit_CDH1_mut_status` (|gap|=0.471; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_ECadherin_low_status,,DF~EXL_ASS,DF=0.480 vs EXL_ASS=0.867 for `audit_ECadherin_low_status` (|gap|=0.386; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_ER_Status,,DF~EXL_ASS,DF=0.533 vs EXL_ASS=0.822 for `audit_ER_Status` (|gap|=0.289; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_GATA3_mut_status,,DF~EXL_ASS,DF=0.523 vs EXL_ASS=0.843 for `audit_GATA3_mut_status` (|gap|=0.320; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_HER2_Final_Status,,DF~EXL_ASS,DF=0.514 vs EXL_ASS=0.803 for `audit_HER2_Final_Status` (|gap|=0.289; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_PIK3CA_mut_status,,DF~EXL_ASS,DF=0.651 vs EXL_ASS=0.879 for `audit_PIK3CA_mut_status` (|gap|=0.228; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_PR_Status,,DF~EXL_ASS,DF=0.579 vs EXL_ASS=0.846 for `audit_PR_Status` (|gap|=0.266; no pre-registered threshold).
+real_v1,MLP,R4,OBSERVED,gap_recorded,audit_TP53_mut_status,,DF~EXL_ASS,DF=0.603 vs EXL_ASS=0.837 for `audit_TP53_mut_status` (|gap|=0.234; no pre-registered threshold).
+real_v1,MLP,R5,INCOMPLETE,missing_provenance,,,dataset_release,Provenance field `dataset_release` is not recorded.
+real_v1,MLP,R5,INCOMPLETE,missing_provenance,,,dataset_sha256,Provenance field `dataset_sha256` is not recorded.
+real_v1,MLP,R5,INCOMPLETE,missing_provenance,,,environment_lock,Provenance field `environment_lock` is not recorded.
+real_v1,MLP,R6,REVIEW,unresolved,audit_ER_Status,Negative,R2-8b28782259,R2 finding `R2-8b28782259` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_PR_Status,Negative,R2-55e3a58f43,R2 finding `R2-55e3a58f43` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_HER2_Final_Status,Positive,R2-16740d9473,R2 finding `R2-16740d9473` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_TP53_mut_status,TP53_mut,R2-737f71a6be,R2 finding `R2-737f71a6be` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_GATA3_mut_status,GATA3_mut,R2-3950c539fb,R2 finding `R2-3950c539fb` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,CDH1_Ecadherin_not_disrupted_proxy,R2-dc7f2ccf06,R2 finding `R2-dc7f2ccf06` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_CDH1_ECadherin_disruption_status,,R2-bc4aef2541,R2 finding `R2-bc4aef2541` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_GATA3_mut_status,,R2-6ffb9b2742,R2 finding `R2-6ffb9b2742` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,audit_TP53_mut_status,,R2-3d3ec43e70,R2 finding `R2-3d3ec43e70` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,,,R5-3b82d19c9b,R5 finding `R5-3b82d19c9b` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,,,R5-3bb70c7031,R5 finding `R5-3bb70c7031` has no recorded disposition.
+real_v1,MLP,R6,REVIEW,unresolved,,,R5-02145f2b7d,R5 finding `R5-02145f2b7d` has no recorded disposition.

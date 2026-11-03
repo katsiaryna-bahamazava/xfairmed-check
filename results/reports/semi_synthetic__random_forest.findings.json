@@ -1,0 +1,866 @@
+{
+ "snapshot_id": "snap-feb881c842c5",
+ "policy_version": "policy-v1",
+ "model": "random_forest",
+ "cohort": "semi_synthetic",
+ "counts": {
+  "R3": {
+   "OBSERVED": 2
+  },
+  "R4": {
+   "OBSERVED": 20
+  },
+  "R5": {
+   "INCOMPLETE": 3
+  },
+  "R6": {
+   "REVIEW": 3
+  }
+ },
+ "gate": "FAIL",
+ "gate_note": "PASS means the configured technical checks found no blocking condition. It is not a fairness certification or deployment approval.",
+ "findings": [
+  {
+   "rule": "R3",
+   "outcome": "OBSERVED",
+   "kind": "declared_limitation",
+   "message": "`SAS` not computed by declaration: audited attributes not predictors. EXL is reported as partial.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "SAS",
+   "evidence": {
+    "metric": "SAS",
+    "justification": "audited attributes not predictors",
+    "declared_scope": "partial"
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_layer_summary_partial_random_forest_oof_omics_leakage_safe.csv"
+    }
+   ],
+   "role": "Explainability owner",
+   "action": "Keep the limitation visible wherever EXL/XCFS is reported.",
+   "finding_id": "R3-b22e19f146",
+   "evidence_fp": "ee3a9336380e"
+  },
+  {
+   "rule": "R3",
+   "outcome": "OBSERVED",
+   "kind": "declared_limitation",
+   "message": "`CSD` not computed by declaration: audited attributes not predictors. EXL is reported as partial.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "CSD",
+   "evidence": {
+    "metric": "CSD",
+    "justification": "audited attributes not predictors",
+    "declared_scope": "partial"
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_layer_summary_partial_random_forest_oof_omics_leakage_safe.csv"
+    }
+   ],
+   "role": "Explainability owner",
+   "action": "Keep the limitation visible wherever EXL/XCFS is reported.",
+   "finding_id": "R3-4cb2fbd749",
+   "evidence_fp": "87592e0ae585"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.692 vs PP=0.940 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.248; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_CDH1_ECadherin_disruption_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.692269,
+    "PP": 0.94033,
+    "gap": 0.248061,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_ECadherin_disruption_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-1d144863b8",
+   "evidence_fp": "5e68862b64d6"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.598 vs PP=0.963 for `audit_CDH1_mut_status` (|gap|=0.365; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_CDH1_mut_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.59809,
+    "PP": 0.963155,
+    "gap": 0.365065,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-3bb2b78298",
+   "evidence_fp": "806bd7c79246"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.585 vs PP=0.967 for `audit_ECadherin_low_status` (|gap|=0.382; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_ECadherin_low_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.585008,
+    "PP": 0.967004,
+    "gap": 0.381997,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ECadherin_low_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-f5fc86dd7f",
+   "evidence_fp": "19eae444054f"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.708 vs PP=0.962 for `audit_ER_Status` (|gap|=0.254; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_ER_Status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.707843,
+    "PP": 0.962343,
+    "gap": 0.254499,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ER_Status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-26f6444337",
+   "evidence_fp": "b84e612b640f"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.739 vs PP=0.998 for `audit_GATA3_mut_status` (|gap|=0.259; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_GATA3_mut_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.739219,
+    "PP": 0.998333,
+    "gap": 0.259115,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_GATA3_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-631eb2002f",
+   "evidence_fp": "a91960a6e8e5"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.830 vs PP=0.988 for `audit_HER2_Final_Status` (|gap|=0.159; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_HER2_Final_Status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.829692,
+    "PP": 0.98827,
+    "gap": 0.158578,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_HER2_Final_Status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-1ee117d292",
+   "evidence_fp": "b181124cb413"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.699 vs PP=0.957 for `audit_PIK3CA_mut_status` (|gap|=0.258; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_PIK3CA_mut_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.698599,
+    "PP": 0.957042,
+    "gap": 0.258443,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PIK3CA_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-48336c8612",
+   "evidence_fp": "ecd97655f21b"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.710 vs PP=0.941 for `audit_PR_Status` (|gap|=0.231; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_PR_Status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.710331,
+    "PP": 0.941429,
+    "gap": 0.231098,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PR_Status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-b23fc368c5",
+   "evidence_fp": "5815cf95a3ee"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.702 vs PP=0.993 for `audit_TP53_mut_status` (|gap|=0.291; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_TP53_mut_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.70194,
+    "PP": 0.993175,
+    "gap": 0.291234,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_TP53_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-5e57c0cd08",
+   "evidence_fp": "d5bd4bbc638a"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.988 vs PP=0.980 for `audit_method_control_status` (|gap|=0.008; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_method_control_status",
+   "subgroup": null,
+   "key": "DF~PP",
+   "evidence": {
+    "DF": 0.987893,
+    "PP": 0.98,
+    "gap": 0.007893,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_method_control_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/amf_layer_by_attribute_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_method_control_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-c82fdba7cc",
+   "evidence_fp": "22fca7b329ef"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.692 vs EXL_ASS=0.814 for `audit_CDH1_ECadherin_disruption_status` (|gap|=0.122; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_CDH1_ECadherin_disruption_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.692269,
+    "EXL_ASS": 0.814015,
+    "gap": 0.121746,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_ECadherin_disruption_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-062892a5c3",
+   "evidence_fp": "bca115f9e4f5"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.598 vs EXL_ASS=0.848 for `audit_CDH1_mut_status` (|gap|=0.250; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_CDH1_mut_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.59809,
+    "EXL_ASS": 0.848437,
+    "gap": 0.250347,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-ed632dbf43",
+   "evidence_fp": "4f091a4ee02e"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.585 vs EXL_ASS=0.845 for `audit_ECadherin_low_status` (|gap|=0.260; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_ECadherin_low_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.585008,
+    "EXL_ASS": 0.84535,
+    "gap": 0.260342,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ECadherin_low_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-002b92313f",
+   "evidence_fp": "6e8e9e0fe080"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.708 vs EXL_ASS=0.927 for `audit_ER_Status` (|gap|=0.220; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_ER_Status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.707843,
+    "EXL_ASS": 0.927393,
+    "gap": 0.21955,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ER_Status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-d97ab0653e",
+   "evidence_fp": "e44815698875"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.739 vs EXL_ASS=0.925 for `audit_GATA3_mut_status` (|gap|=0.186; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_GATA3_mut_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.739219,
+    "EXL_ASS": 0.925283,
+    "gap": 0.186065,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_GATA3_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-004075c0cd",
+   "evidence_fp": "25a39b1af133"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.830 vs EXL_ASS=0.945 for `audit_HER2_Final_Status` (|gap|=0.115; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_HER2_Final_Status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.829692,
+    "EXL_ASS": 0.944863,
+    "gap": 0.115171,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_HER2_Final_Status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-201bbba83e",
+   "evidence_fp": "f6f42d0341ca"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.699 vs EXL_ASS=0.921 for `audit_PIK3CA_mut_status` (|gap|=0.223; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_PIK3CA_mut_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.698599,
+    "EXL_ASS": 0.921256,
+    "gap": 0.222657,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PIK3CA_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-d937ae751b",
+   "evidence_fp": "8d4fba99ac3e"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.710 vs EXL_ASS=0.942 for `audit_PR_Status` (|gap|=0.231; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_PR_Status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.710331,
+    "EXL_ASS": 0.941721,
+    "gap": 0.231391,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PR_Status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-66d143870e",
+   "evidence_fp": "3d0d76fc804e"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.702 vs EXL_ASS=0.928 for `audit_TP53_mut_status` (|gap|=0.226; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_TP53_mut_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.70194,
+    "EXL_ASS": 0.928136,
+    "gap": 0.226196,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_TP53_mut_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-146af4147b",
+   "evidence_fp": "674119d86091"
+  },
+  {
+   "rule": "R4",
+   "outcome": "OBSERVED",
+   "kind": "gap_recorded",
+   "message": "DF=0.988 vs EXL_ASS=0.964 for `audit_method_control_status` (|gap|=0.024; no pre-registered threshold).",
+   "model": "random_forest",
+   "attribute": "audit_method_control_status",
+   "subgroup": null,
+   "key": "DF~EXL_ASS",
+   "evidence": {
+    "DF": 0.987893,
+    "EXL_ASS": 0.963511,
+    "gap": 0.024381,
+    "delta": null
+   },
+   "refs": [
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_method_control_status"
+     }
+    },
+    {
+     "artifact": "studies/tcga_brca_model_agnostic_fairness/results/toy_validation/tables/exl_ass_model_agnostic_random_forest_oof_omics_leakage_safe.csv",
+     "row": {
+      "audited_attribute": "audit_method_control_status"
+     }
+    }
+   ],
+   "role": "Fairness reviewer + clinical domain expert",
+   "action": "None required by policy; evidence preserved.",
+   "finding_id": "R4-617c0c7c1e",
+   "evidence_fp": "35cb91e382a8"
+  },
+  {
+   "rule": "R5",
+   "outcome": "INCOMPLETE",
+   "kind": "missing_provenance",
+   "message": "Provenance field `dataset_release` is not recorded.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "dataset_release",
+   "evidence": {
+    "field": "dataset_release",
+    "value": null
+   },
+   "refs": [],
+   "role": "ML engineer (pipeline owner)",
+   "action": "Record the value in the run manifest or repeat the run with it documented.",
+   "finding_id": "R5-4cd49c3689",
+   "evidence_fp": "f99b975cb8e0"
+  },
+  {
+   "rule": "R5",
+   "outcome": "INCOMPLETE",
+   "kind": "missing_provenance",
+   "message": "Provenance field `dataset_sha256` is not recorded.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "dataset_sha256",
+   "evidence": {
+    "field": "dataset_sha256",
+    "value": null
+   },
+   "refs": [],
+   "role": "ML engineer (pipeline owner)",
+   "action": "Record the value in the run manifest or repeat the run with it documented.",
+   "finding_id": "R5-82027eb462",
+   "evidence_fp": "9fc9a0281d13"
+  },
+  {
+   "rule": "R5",
+   "outcome": "INCOMPLETE",
+   "kind": "missing_provenance",
+   "message": "Provenance field `environment_lock` is not recorded.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "environment_lock",
+   "evidence": {
+    "field": "environment_lock",
+    "value": null
+   },
+   "refs": [],
+   "role": "ML engineer (pipeline owner)",
+   "action": "Record the value in the run manifest or repeat the run with it documented.",
+   "finding_id": "R5-3c7c53e329",
+   "evidence_fp": "179c7c4a864a"
+  },
+  {
+   "rule": "R6",
+   "outcome": "REVIEW",
+   "kind": "unresolved",
+   "message": "R5 finding `R5-4cd49c3689` has no recorded disposition.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "R5-4cd49c3689",
+   "evidence": {
+    "target": "R5-4cd49c3689",
+    "target_fp": "f99b975cb8e0"
+   },
+   "refs": [],
+   "role": "Responsibility lead (review owner)",
+   "action": "Assign an owner and record a decision with rationale.",
+   "finding_id": "R6-fff9107764",
+   "evidence_fp": "2e141efd751c"
+  },
+  {
+   "rule": "R6",
+   "outcome": "REVIEW",
+   "kind": "unresolved",
+   "message": "R5 finding `R5-82027eb462` has no recorded disposition.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "R5-82027eb462",
+   "evidence": {
+    "target": "R5-82027eb462",
+    "target_fp": "9fc9a0281d13"
+   },
+   "refs": [],
+   "role": "Responsibility lead (review owner)",
+   "action": "Assign an owner and record a decision with rationale.",
+   "finding_id": "R6-51731ac782",
+   "evidence_fp": "0b3bcdd030c7"
+  },
+  {
+   "rule": "R6",
+   "outcome": "REVIEW",
+   "kind": "unresolved",
+   "message": "R5 finding `R5-3c7c53e329` has no recorded disposition.",
+   "model": "random_forest",
+   "attribute": null,
+   "subgroup": null,
+   "key": "R5-3c7c53e329",
+   "evidence": {
+    "target": "R5-3c7c53e329",
+    "target_fp": "179c7c4a864a"
+   },
+   "refs": [],
+   "role": "Responsibility lead (review owner)",
+   "action": "Assign an owner and record a decision with rationale.",
+   "finding_id": "R6-275ba47fd4",
+   "evidence_fp": "c4fb0f7227b4"
+  }
+ ]
+}

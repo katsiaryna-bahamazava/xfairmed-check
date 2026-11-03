@@ -1,0 +1,5 @@
+model,items,n_low_support,n_parity_not_computable,n_uncertainty,n_exl_scope,n_provenance,T_A,valid_A,applicable_A,T_B,valid_B,applicable_B,T_C,valid_C,applicable_C
+LR,18,6,3,1,2,6,0.0,0,99,0.45454545454545453,45,99,1.0,99,99
+RF,18,6,3,1,2,6,0.0,0,99,0.45454545454545453,45,99,1.0,99,99
+XGB,18,6,3,1,2,6,0.0,0,99,0.45454545454545453,45,99,1.0,99,99
+MLP,18,6,3,1,2,6,0.0,0,99,0.45454545454545453,45,99,1.0,99,99

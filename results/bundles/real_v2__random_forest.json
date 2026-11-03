@@ -1,0 +1,1397 @@
+{
+ "bundle_version": "2.0",
+ "cohort": "real_v2",
+ "model": "random_forest",
+ "I": {
+  "dataset_id": "TCGA-BRCA multi-omics (brca_data_w_subtypes.csv)",
+  "panel": "omics_leakage_safe",
+  "task": "IDC vs ILC",
+  "n_samples": 705,
+  "class_counts": {
+   "IDC": 574,
+   "ILC": 131
+  },
+  "audited_attributes": [
+   "audit_ER_Status",
+   "audit_PR_Status",
+   "audit_HER2_Final_Status",
+   "audit_TP53_mut_status",
+   "audit_PIK3CA_mut_status",
+   "audit_GATA3_mut_status",
+   "audit_CDH1_mut_status",
+   "audit_ECadherin_low_status",
+   "audit_CDH1_ECadherin_disruption_status"
+  ]
+ },
+ "M": {
+  "model_id": "random_forest",
+  "predictions": {
+   "withheld": true,
+   "justification": "Protected asset excluded from release: raw TCGA records, patient-level predictions, patient-level feature attributions, trained model binaries, raw intervention archives",
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/paper_release_20261028/PAPER_CANDIDATE_STATUS_20261028.json"
+   }
+  },
+  "metrics": {
+   "balanced_accuracy_mean": 0.8537409899726043,
+   "AUROC_mean": 0.93674229326808,
+   "ILC_recall_mean": 0.7938931297709925,
+   "IDC_specificity_mean": 0.913588850174216,
+   "accuracy_mean": 0.8913475177304964,
+   "ILC_average_precision_mean": 0.8113281252766388,
+   "Brier_mean": 0.09320151118280132,
+   "log_loss_mean": 0.32281999215459906
+  },
+  "metrics_ref": {
+   "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/performance_summary.csv",
+   "row": {
+    "model": "random_forest"
+   }
+  }
+ },
+ "G": {
+  "support_policy": {
+   "min_total": 35,
+   "min_class": 10,
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/specs/SUBGROUP_SUPPORT_AND_UNCERTAINTY_SPEC_v1.0.0.md"
+   }
+  },
+  "groups": [
+   {
+    "attribute": "audit_ER_Status",
+    "group": "Positive",
+    "n_IDC": 364,
+    "n_ILC": 50,
+    "total": 414,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status",
+      "group": "Positive"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ER_Status",
+    "group": "Negative",
+    "n_IDC": 132,
+    "n_ILC": 3,
+    "total": 135,
+    "declared_eligible": false,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status",
+      "group": "Negative"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ER_Status",
+    "group": "Unknown",
+    "n_IDC": 78,
+    "n_ILC": 78,
+    "total": 156,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_ER_Status",
+      "group": "Unknown"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PR_Status",
+    "group": "Positive",
+    "n_IDC": 310,
+    "n_ILC": 43,
+    "total": 353,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status",
+      "group": "Positive"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PR_Status",
+    "group": "Negative",
+    "n_IDC": 184,
+    "n_ILC": 9,
+    "total": 193,
+    "declared_eligible": false,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status",
+      "group": "Negative"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PR_Status",
+    "group": "Unknown",
+    "n_IDC": 80,
+    "n_ILC": 79,
+    "total": 159,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_PR_Status",
+      "group": "Unknown"
+     }
+    }
+   },
+   {
+    "attribute": "audit_HER2_Final_Status",
+    "group": "Negative",
+    "n_IDC": 408,
+    "n_ILC": 49,
+    "total": 457,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status",
+      "group": "Negative"
+     }
+    }
+   },
+   {
+    "attribute": "audit_HER2_Final_Status",
+    "group": "Unknown",
+    "n_IDC": 82,
+    "n_ILC": 80,
+    "total": 162,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status",
+      "group": "Unknown"
+     }
+    }
+   },
+   {
+    "attribute": "audit_HER2_Final_Status",
+    "group": "Positive",
+    "n_IDC": 84,
+    "n_ILC": 2,
+    "total": 86,
+    "declared_eligible": false,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_HER2_Final_Status",
+      "group": "Positive"
+     }
+    }
+   },
+   {
+    "attribute": "audit_TP53_mut_status",
+    "group": "TP53_WT",
+    "n_IDC": 355,
+    "n_ILC": 123,
+    "total": 478,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status",
+      "group": "TP53_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_TP53_mut_status",
+    "group": "TP53_mut",
+    "n_IDC": 219,
+    "n_ILC": 8,
+    "total": 227,
+    "declared_eligible": false,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_TP53_mut_status",
+      "group": "TP53_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PIK3CA_mut_status",
+    "group": "PIK3CA_WT",
+    "n_IDC": 401,
+    "n_ILC": 73,
+    "total": 474,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status",
+      "group": "PIK3CA_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_PIK3CA_mut_status",
+    "group": "PIK3CA_mut",
+    "n_IDC": 173,
+    "n_ILC": 58,
+    "total": 231,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_PIK3CA_mut_status",
+      "group": "PIK3CA_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_GATA3_mut_status",
+    "group": "GATA3_WT",
+    "n_IDC": 508,
+    "n_ILC": 125,
+    "total": 633,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status",
+      "group": "GATA3_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_GATA3_mut_status",
+    "group": "GATA3_mut",
+    "n_IDC": 66,
+    "n_ILC": 6,
+    "total": 72,
+    "declared_eligible": false,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_GATA3_mut_status",
+      "group": "GATA3_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_mut_status",
+    "group": "CDH1_WT",
+    "n_IDC": 563,
+    "n_ILC": 62,
+    "total": 625,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status",
+      "group": "CDH1_WT"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_mut_status",
+    "group": "CDH1_mut",
+    "n_IDC": 11,
+    "n_ILC": 69,
+    "total": 80,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_mut_status",
+      "group": "CDH1_mut"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ECadherin_low_status",
+    "group": "Ecadherin_not_low",
+    "n_IDC": 504,
+    "n_ILC": 24,
+    "total": 528,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status",
+      "group": "Ecadherin_not_low"
+     }
+    }
+   },
+   {
+    "attribute": "audit_ECadherin_low_status",
+    "group": "Ecadherin_low_q25",
+    "n_IDC": 70,
+    "n_ILC": 107,
+    "total": 177,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_ECadherin_low_status",
+      "group": "Ecadherin_low_q25"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_ECadherin_disruption_status",
+    "group": "CDH1_Ecadherin_disrupted_proxy",
+    "n_IDC": 360,
+    "n_ILC": 125,
+    "total": 485,
+    "declared_eligible": true,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status",
+      "group": "CDH1_Ecadherin_disrupted_proxy"
+     }
+    }
+   },
+   {
+    "attribute": "audit_CDH1_ECadherin_disruption_status",
+    "group": "CDH1_Ecadherin_not_disrupted_proxy",
+    "n_IDC": 214,
+    "n_ILC": 6,
+    "total": 220,
+    "declared_eligible": false,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv",
+     "row": {
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status",
+      "group": "CDH1_Ecadherin_not_disrupted_proxy"
+     }
+    }
+   }
+  ]
+ },
+ "P": {
+  "DF": {
+   "value": 0.5405280695790249,
+   "components": {
+    "RES": 0.6009458361903222,
+    "MIS": 0.6320693583844954,
+    "FDS": 0.872649649885937,
+    "IBS": 0.05644743385534565
+   },
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_summary.csv"
+   }
+  },
+  "DF_units": {
+   "audit_ER_Status": {
+    "value": 0.5327491786576009,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ER_Status"
+     }
+    }
+   },
+   "audit_PR_Status": {
+    "value": 0.5794350709996088,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PR_Status"
+     }
+    }
+   },
+   "audit_HER2_Final_Status": {
+    "value": 0.5136620702468206,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "audit_TP53_mut_status": {
+    "value": 0.6026211948554613,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "audit_PIK3CA_mut_status": {
+    "value": 0.6508086734583055,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "audit_GATA3_mut_status": {
+    "value": 0.5227576593984777,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "audit_CDH1_mut_status": {
+    "value": 0.36909879411205554,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "audit_ECadherin_low_status": {
+    "value": 0.48028468454854073,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "audit_CDH1_ECadherin_disruption_status": {
+    "value": 0.6133352999343544,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv",
+     "row": {
+      "audit_unit": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   }
+  },
+  "AMF": {
+   "value": 0.966287103062,
+   "components": {
+    "PP": 0.947328461053,
+    "PR": 0.997645857826,
+    "RP": 0.953886990308
+   },
+   "n_supported_attributes": 6,
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/DF_AMF_REAL_5X5_FOR_ABLATION.csv",
+    "row": {
+     "model": "random_forest"
+    }
+   }
+  },
+  "parity_units": {
+   "audit_ER_Status": {
+    "PP": 0.9468901098901099,
+    "RP": 0.9738442683874536,
+    "note": null,
+    "groups_used": [
+     "Positive",
+     "Unknown"
+    ],
+    "excluded_groups": [
+     "Negative"
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "audit_PR_Status": {
+    "PP": 0.9611053752362141,
+    "RP": 0.9870228540660004,
+    "note": null,
+    "groups_used": [
+     "Positive",
+     "Unknown"
+    ],
+    "excluded_groups": [
+     "Negative"
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "audit_HER2_Final_Status": {
+    "PP": 0.9498240027718404,
+    "RP": 0.9563423894843558,
+    "note": null,
+    "groups_used": [
+     "Negative",
+     "Unknown"
+    ],
+    "excluded_groups": [
+     "Positive"
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "audit_TP53_mut_status": {
+    "PP": null,
+    "RP": null,
+    "note": "UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two).",
+    "groups_used": [
+     "TP53_WT"
+    ],
+    "excluded_groups": [
+     "TP53_mut"
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "audit_PIK3CA_mut_status": {
+    "PP": 0.9804379811609134,
+    "RP": 0.9500979565306663,
+    "note": null,
+    "groups_used": [
+     "PIK3CA_WT",
+     "PIK3CA_mut"
+    ],
+    "excluded_groups": [],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "audit_GATA3_mut_status": {
+    "PP": null,
+    "RP": null,
+    "note": "UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two).",
+    "groups_used": [
+     "GATA3_WT"
+    ],
+    "excluded_groups": [
+     "GATA3_mut"
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "audit_CDH1_mut_status": {
+    "PP": 0.9577337689999272,
+    "RP": 0.9693879714251331,
+    "note": null,
+    "groups_used": [
+     "CDH1_WT",
+     "CDH1_mut"
+    ],
+    "excluded_groups": [],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "audit_ECadherin_low_status": {
+    "PP": 0.8879795282599021,
+    "RP": 0.8866265019570168,
+    "note": null,
+    "groups_used": [
+     "Ecadherin_not_low",
+     "Ecadherin_low_q25"
+    ],
+    "excluded_groups": [],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "audit_CDH1_ECadherin_disruption_status": {
+    "PP": null,
+    "RP": null,
+    "note": "UNDEFINED_AT_LEAST_ONE_REPEAT; frozen required groups: 1 (pairwise parity needs at least two).",
+    "groups_used": [
+     "CDH1_Ecadherin_disrupted_proxy"
+    ],
+    "excluded_groups": [
+     "CDH1_Ecadherin_not_disrupted_proxy"
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   }
+  },
+  "XCFS": {
+   "value": 0.771945165601,
+   "label": "XCFS_partial",
+   "aggregation": "geometric_mean",
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/FULL_XCFS_LAYER_ABLATION.csv",
+    "row": {
+     "model": "random_forest"
+    }
+   }
+  }
+ },
+ "A": {
+  "metrics": {
+   "ASS": {
+    "status": "computed",
+    "value": 0.788105665309,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/FULL_XCFS_LAYER_ABLATION.csv",
+     "row": {
+      "model": "random_forest"
+     }
+    }
+   },
+   "ERS": {
+    "status": "computed",
+    "value": 0.973322417112,
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/FULL_XCFS_LAYER_ABLATION.csv",
+     "row": {
+      "model": "random_forest"
+     }
+    }
+   },
+   "SAS": {
+    "status": "not_applicable",
+    "justification": "audited attributes are excluded from the model inputs (leakage-safe cohort)",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/specs/SCIENTIFIC_METRIC_AUDIT_v0.1.0.md"
+    }
+   },
+   "CSD": {
+    "status": "not_applicable",
+    "justification": "audited attributes are excluded from the model inputs (leakage-safe cohort)",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/specs/SCIENTIFIC_METRIC_AUDIT_v0.1.0.md"
+    }
+   }
+  },
+  "EXL": {
+   "value": 0.880714041211,
+   "label": "EXL_original_ASS_ERS",
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/FULL_XCFS_LAYER_ABLATION.csv",
+    "row": {
+     "model": "random_forest"
+    }
+   }
+  },
+  "ASS_units": {
+   "audit_ER_Status": {
+    "value": 0.8572143476069387,
+    "status": "VALID_ALL_REPEATS",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "audit_PR_Status": {
+    "value": 0.8597250592786564,
+    "status": "VALID_ALL_REPEATS",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "audit_HER2_Final_Status": {
+    "value": 0.8478831742774071,
+    "status": "VALID_ALL_REPEATS",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "audit_TP53_mut_status": {
+    "value": null,
+    "status": "UNDEFINED_OR_INCOMPLETE",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "audit_PIK3CA_mut_status": {
+    "value": 0.8616128986900206,
+    "status": "VALID_ALL_REPEATS",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "audit_GATA3_mut_status": {
+    "value": null,
+    "status": "UNDEFINED_OR_INCOMPLETE",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "audit_CDH1_mut_status": {
+    "value": 0.6675247006528846,
+    "status": "VALID_ALL_REPEATS",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "audit_ECadherin_low_status": {
+    "value": 0.6346738113499383,
+    "status": "VALID_ALL_REPEATS",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "audit_CDH1_ECadherin_disruption_status": {
+    "value": null,
+    "status": "UNDEFINED_OR_INCOMPLETE",
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv",
+     "row": {
+      "model": "random_forest",
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   }
+  },
+  "declared_scope": "partial",
+  "declared_scope_source": "XCFS_partial (SCIENTIFIC_METRIC_AUDIT_v0.1.0.md)"
+ },
+ "U": {
+  "records": {
+   "PP|audit_ER_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.8784468783635043,
+     0.9871797567722935
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "RP|audit_ER_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.9394666026497146,
+     0.9958097265119493
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "PP|audit_PR_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.8893366569984044,
+     0.9877794361283464
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "RP|audit_PR_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.9515016652351878,
+     0.9962687427798375
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "PP|audit_HER2_Final_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.8823503441967913,
+     0.988508908805415
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "RP|audit_HER2_Final_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.9240877299608206,
+     0.9899948248240238
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "PP|audit_TP53_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 0,
+    "status": "UNDEFINED_NO_VALID_REPLICATES",
+    "ci": [
+     null,
+     null
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "RP|audit_TP53_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 0,
+    "status": "UNDEFINED_NO_VALID_REPLICATES",
+    "ci": [
+     null,
+     null
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_TP53_mut_status"
+     }
+    }
+   },
+   "PP|audit_PIK3CA_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.90633044816959,
+     0.990174062190488
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "RP|audit_PIK3CA_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.921146004386572,
+     0.9782531757834656
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "PP|audit_GATA3_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 0,
+    "status": "UNDEFINED_NO_VALID_REPLICATES",
+    "ci": [
+     null,
+     null
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "RP|audit_GATA3_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 0,
+    "status": "UNDEFINED_NO_VALID_REPLICATES",
+    "ci": [
+     null,
+     null
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_GATA3_mut_status"
+     }
+    }
+   },
+   "PP|audit_CDH1_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 1998,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.827087751338947,
+     0.9810852502678179
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "RP|audit_CDH1_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.928198170445524,
+     0.9946193135551368
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "PP|audit_ECadherin_low_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.7779158675987798,
+     0.9754812516921101
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "RP|audit_ECadherin_low_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.8546572737819094,
+     0.9190308236816528
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   },
+   "PP|audit_CDH1_ECadherin_disruption_status": {
+    "n_attempted": 2000,
+    "n_valid": 0,
+    "status": "UNDEFINED_NO_VALID_REPLICATES",
+    "ci": [
+     null,
+     null
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "PP_balanced_accuracy",
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   },
+   "RP|audit_CDH1_ECadherin_disruption_status": {
+    "n_attempted": 2000,
+    "n_valid": 0,
+    "status": "UNDEFINED_NO_VALID_REPLICATES",
+    "ci": [
+     null,
+     null
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "RP_probability",
+      "audited_attribute": "audit_CDH1_ECadherin_disruption_status"
+     }
+    }
+   },
+   "ERS": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.9719648258521536,
+     0.9747356619912495
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ERS",
+      "audited_attribute": ""
+     }
+    }
+   },
+   "ASS|audit_ER_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.8076188795268536,
+     0.8376218626648188
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ASS",
+      "audited_attribute": "audit_ER_Status"
+     }
+    }
+   },
+   "ASS|audit_PR_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.8077125768363476,
+     0.8387586285173892
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ASS",
+      "audited_attribute": "audit_PR_Status"
+     }
+    }
+   },
+   "ASS|audit_HER2_Final_Status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.7998633456975222,
+     0.8318130318075418
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ASS",
+      "audited_attribute": "audit_HER2_Final_Status"
+     }
+    }
+   },
+   "ASS|audit_PIK3CA_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.817056511491537,
+     0.8513924086093902
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ASS",
+      "audited_attribute": "audit_PIK3CA_mut_status"
+     }
+    }
+   },
+   "ASS|audit_CDH1_mut_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.6117413142323495,
+     0.6837805692851543
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ASS",
+      "audited_attribute": "audit_CDH1_mut_status"
+     }
+    }
+   },
+   "ASS|audit_ECadherin_low_status": {
+    "n_attempted": 2000,
+    "n_valid": 2000,
+    "status": "PROVISIONAL_CONDITIONAL_95PCT_CI_COVERAGE_UNCALIBRATED",
+    "ci": [
+     0.5908946485817432,
+     0.656021276563406
+    ],
+    "ref": {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv",
+     "row": {
+      "model": "random_forest",
+      "metric": "ASS",
+      "audited_attribute": "audit_ECadherin_low_status"
+     }
+    }
+   }
+  },
+  "not_approved_methods": {
+   "ASS": "all 6 candidate interval methods failed calibration"
+  },
+  "not_approved_ref": {
+   "artifact": "studies/tcga_brca_xai_revision/reports/xai_uncertainty_integrated_FINAL_v2/ass_calibration_method_decisions.csv"
+  }
+ },
+ "V": {
+  "xfairmed_version": "0.1.0 / protocol XFM-TCGA-IDCILC-v2.0.0",
+  "code_commit": "53ab5425e15460c5a11853b5b767ae00f31202d4",
+  "run_script": "v2_unified_resumable_NON_PAPER_fullgrid_5x5_20261026",
+  "random_seed": 20261022,
+  "cv_folds": "5 repeats x 5 outer folds",
+  "dataset_file": "datasets/raw/brca_data_w_subtypes.csv",
+  "dataset_release": "doi:10.1093/bioinformatics/btac405 via https://www.kaggle.com/datasets/samdemharter/brca-multiomics-tcga",
+  "dataset_sha256": "55e75f4931574d9026796d1b91bed9b17e10cae7d81bcb9741c89ceb3f797f16",
+  "environment_lock": "studies/tcga_brca_xai_revision/configs/environment_v2_requirements.txt",
+  "protocol_sha256": "eae9471eacdb64a45e8747b1239bd3c2bfac17985a296d37412ee5dbaf347d81",
+  "claims": {
+   "publication_supports_distinct_source_patients": true,
+   "local_csv_has_705_rows_matching_source": true,
+   "local_full_row_duplicates_none": true,
+   "original_patient_barcodes_investigated": false,
+   "local_row_to_unique_patient_mapping_independently_confirmed": false,
+   "downloadable_original_csv_bitwise_identity_confirmed": false,
+   "modality_merge_provenance_verified": false
+  },
+  "gates": {
+   "local_feature_panel": "PASS_BY_LOCAL_COMMAND_EVIDENCE",
+   "source_patient_uniqueness": "SUPPORTED_BY_ORIGINAL_PUBLICATION",
+   "local_patient_uniqueness": "INFERRED_FROM_SOURCE_NOT_VERIFIED_BY_ROW_IDENTIFIERS",
+   "target_and_audit_structure": "PASS_BY_LOCAL_RUNNER_OUTPUT",
+   "predictor_numeric_completeness": "PASS_BY_LOCAL_RUNNER_OUTPUT",
+   "source_to_local_bitwise_traceability": "PENDING_NO_ORIGINAL_KAGGLE_HASH_AVAILABLE",
+   "definitive_training": "BLOCKED_PENDING_UPSTREAM_PROVENANCE_REVIEW_AND_V2_TRAINING_ENVIRONMENT_WEIGHTING_AND_RUNNER_TESTS",
+   "local_structural_integrity": "PASS_705_ROWS_574_IDC_131_ILC_1930_FEATURES_9_ATTRIBUTES_21_SUBGROUPS_ALL_FINITE"
+  },
+  "record_ref": {
+   "artifact": "studies/tcga_brca_xai_revision/configs/cohort_provenance_v2.0.0.json"
+  },
+  "refs": {
+   "xfairmed_version": [
+    {
+     "artifact": "pyproject.toml"
+    },
+    {
+     "artifact": "studies/tcga_brca_xai_revision/configs/cohort_provenance_v2.0.0.json"
+    }
+   ],
+   "run_script": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/explanation_run_identity.json"
+    }
+   ],
+   "protocol_sha256": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/explanation_run_identity.json"
+    }
+   ],
+   "random_seed": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/configs/model_protocol_v2.0.0.json"
+    }
+   ],
+   "cv_folds": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/results_manifest.json"
+    }
+   ],
+   "dataset_file": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/configs/cohort_provenance_v2.0.0.json"
+    }
+   ],
+   "dataset_release": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/configs/cohort_provenance_v2.0.0.json"
+    }
+   ],
+   "dataset_sha256": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/configs/cohort_provenance_v2.0.0.json"
+    }
+   ],
+   "environment_lock": [
+    {
+     "artifact": "studies/tcga_brca_xai_revision/configs/environment_v2_requirements.txt"
+    }
+   ]
+  },
+  "artifacts": {
+   "pyproject.toml": "a3e2f32368d79cf32200a98d0ee01072b7fadb27568e29ff6f3bc03bc19115c5",
+   "studies/tcga_brca_xai_revision/configs/cohort_provenance_v2.0.0.json": "eb8a5a62a52938f3d76a260f8d44096eb10e22374e42b865ffdc4d56ffb8824e",
+   "studies/tcga_brca_xai_revision/configs/environment_v2_requirements.txt": "f2b56e44d8a59eab8f92408b42b3be982d8d1a0bf8fe4f27f3abd1e727c20c60",
+   "studies/tcga_brca_xai_revision/configs/model_protocol_v2.0.0.json": "eae9471eacdb64a45e8747b1239bd3c2bfac17985a296d37412ee5dbaf347d81",
+   "studies/tcga_brca_xai_revision/paper_release_20261028/PAPER_CANDIDATE_STATUS_20261028.json": "613cd7206c95cee44afdf9beb67bc8101444334d613b526a08a3c1d0ca06beff",
+   "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/DF_AMF_REAL_5X5_FOR_ABLATION.csv": "33b9402c374eb219f6afb334898acd76d8b4b78a81e854694a027ca4a2059d6f",
+   "studies/tcga_brca_xai_revision/paper_release_20261028/xcfs_ablation_20261028/FULL_XCFS_LAYER_ABLATION.csv": "d59dfeec1d3f80a6e70a3d8075d59a5c4777bc12169cc15d09f73e1d356678e2",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/fairness_PP_RP_5x5.csv": "d93f2c5e9f5ba6c577807ed0bb61e7c8dbe3349d3222c4daf7d7f70d3a61d5e3",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/frozen_subgroup_support.csv": "27e1609e8d70c4193cec4d8de2722325e441f6cd139984366f2dc37ebfcacce5",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_20261027/performance_summary.csv": "5075113b542417eaaad86cadae9e3383c1a1b2c8750d3edb2b848a6ce061d88a",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_bootstrap_EXL_20261027/bootstrap_metric_intervals.csv": "b58a017f2110a1bc3e8c7d2ef4b86587eb19c545297133a5708f15d135253a78",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/ASS_summary.csv": "ef0c0b25f5745bebc83d1b3de8b2b1aa1a7a2b4f903cc6104740d49e988d2383",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/explanation_run_identity.json": "821f16a421e252b86d5df6544c17a07ff63d8705cf0f736202d0f0363e0049e5",
+   "studies/tcga_brca_xai_revision/reports/xai_full5x5_explanations_v1/results_manifest.json": "25e8a2900a7cffa27336465ead32082424d91ebf514b2012defad0026caad57d",
+   "studies/tcga_brca_xai_revision/reports/xai_uncertainty_integrated_FINAL_v2/ass_calibration_method_decisions.csv": "3a3a7f4c8c4462751f5484e200cd509608421cccb21b5c5930a4f2661767254a",
+   "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_by_attribute.csv": "1d786c76a67e0c0ad1aeb07d893ee814259e6f02846775e27ff350f8b1c756f8",
+   "studies/tcga_brca_xai_revision/reports/xcfs_real_data_ablation_20261028/layer_reconstruction/original_df_components/data_fairness_layer_summary.csv": "f178a1ae17aac34b51398d5c9b2ff529f466ced03ee61bdc9e839187aa510fd8",
+   "studies/tcga_brca_xai_revision/specs/SCIENTIFIC_METRIC_AUDIT_v0.1.0.md": "a104948db20ab163f80e79bad5d5e987c3397a876506573f46afd23b1a63e4e1",
+   "studies/tcga_brca_xai_revision/specs/SUBGROUP_SUPPORT_AND_UNCERTAINTY_SPEC_v1.0.0.md": "7827ed6522408f9fb959a420f2991aa91721862239a574c8e731e89af98e00b5"
+  }
+ },
+ "contract": {
+  "required_metrics": {
+   "DF": [
+    "RES",
+    "MIS",
+    "FDS",
+    "IBS"
+   ],
+   "AMF": [
+    "PP",
+    "PR",
+    "RP"
+   ],
+   "EXL": [
+    "ASS",
+    "ERS",
+    "SAS",
+    "CSD"
+   ]
+  },
+  "allow_declared_not_applicable": true,
+  "uncertainty": {
+   "required": true,
+   "min_attempted": 2000,
+   "min_valid_fraction": 0.95,
+   "ref": {
+    "artifact": "studies/tcga_brca_xai_revision/specs/SUBGROUP_SUPPORT_AND_UNCERTAINTY_SPEC_v1.0.0.md"
+   }
+  },
+  "required_provenance": [
+   "xfairmed_version",
+   "code_commit",
+   "run_script",
+   "random_seed",
+   "cv_folds",
+   "dataset_file",
+   "dataset_release",
+   "dataset_sha256",
+   "environment_lock"
+  ]
+ }
+}
