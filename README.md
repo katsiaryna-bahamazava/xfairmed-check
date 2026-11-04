@@ -50,6 +50,4 @@ The frozen bundles and result tables are included to permit inspection of the ev
 
 The scripts and stored results address six responsibilities: schema validity (R1), subgroup support and uncertainty declarations (R2), explanation-scope declarations (R3), cross-layer divergence (R4), provenance (R5), and review continuity (R6). The findings do **not** establish discrimination, clinical safety or ethical acceptability. Deterministic fixture conformance does not establish usefulness in real engineering teams; a practitioner study is not claimed.
 
-## Submission anonymity
 
-This is a public, identifiable repository. It is **not** an anonymous artifact for a double-anonymous review. Avoid linking to it from a blind submission unless the venue permits identifying artifacts; use a separately anonymized snapshot where required.
