@@ -1,0 +1,46 @@
+# Example GitHub Actions job for the XFAIR-MED toolkit repository:
+# run XFAIR-MED Check whenever audit outputs change.
+# The job fails only on INCOMPLETE findings (evidence defects). REVIEW findings
+# are published as a report for the responsible reviewers; they do not block.
+# Passing the checks is not a fairness certification.
+name: xfairmed-check
+on:
+  pull_request:
+    paths: ["studies/**", "review/**"]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        model: [logistic_regression, random_forest, xgboost, mlp]
+    steps:
+      - uses: actions/checkout@v4          # the audited toolkit (this repository)
+      - uses: actions/checkout@v4          # the checker
+        with:
+          repository: katsiaryna-bahamazava/xfairmed-check
+          path: checker
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Build evidence bundle from the audit outputs
+        env: {PYTHONPATH: checker}
+        run: |
+          python -c "import json, sys; from pathlib import Path; \
+          from xfairmed_check.bundle_v2 import build_bundle_v2; \
+          Path('bundle.json').write_text(json.dumps(build_bundle_v2(Path('.'), sys.argv[1], sys.argv[2])))" \
+          "${{ matrix.model }}" "${{ github.event.pull_request.head.sha }}"
+      - name: Run responsibility checks
+        env: {PYTHONPATH: checker}
+        run: |
+          python -m xfairmed_check.cli bundle.json --artifact-root . \
+            --ledger review/review_ledger.json \
+            --out findings.json --report review_report.md
+      - name: Publish the review report with the run
+        if: always()
+        run: cat review_report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: xfairmed-review-${{ matrix.model }}
+          path: |
+            findings.json
+            review_report.md
