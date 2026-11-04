@@ -15,8 +15,6 @@ The checker reads existing aggregate fairness-audit outputs, without recomputing
 - `results_before_fix/`: earlier mutation-test results, retained to document bugs uncovered before the repairs.
 - `walkthrough/protocol.md`: planned informal walkthrough protocol; **not evidence of completed user testing**.
 
-**The manuscript is intentionally not included.** This repository contains the implementation and associated experimental artifacts, not the old or current LaTeX draft.
-
 ## Run checker tests
 
 Requires Python >=3.10. Tests run without the medical data and without the original toolkit source.
