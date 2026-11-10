@@ -27,13 +27,13 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 
-from xfairmed_check.bundle import build_bundle  # noqa: E402
-from xfairmed_check.bundle_v2 import build_bundle_v2  # noqa: E402
-from xfairmed_check.engine import run_checks  # noqa: E402
-from xfairmed_check.ledger import ledger_entry  # noqa: E402
-from xfairmed_check.mutate import alert_sigs, generate  # noqa: E402
-from xfairmed_check.report import to_markdown  # noqa: E402
-from xfairmed_check.rules import Finding  # noqa: E402
+from evidence_checker.adapters.xfairmed_v1 import build_bundle  # noqa: E402
+from evidence_checker.adapters.xfairmed_v2 import build_bundle_v2  # noqa: E402
+from evidence_checker.engine import run_checks  # noqa: E402
+from evidence_checker.ledger import ledger_entry  # noqa: E402
+from evidence_checker.mutate import alert_sigs, generate  # noqa: E402
+from evidence_checker.report import to_markdown  # noqa: E402
+from evidence_checker.rules import Finding  # noqa: E402
 
 V1_MODELS = ["logistic_regression", "random_forest", "mlp"]
 V2_MODELS = ["logistic_regression", "random_forest", "xgboost", "mlp"]
@@ -425,7 +425,7 @@ def main():
     ap.add_argument("--repo", type=Path, required=True)
     ap.add_argument("--v2", type=Path, required=True)
     ap.add_argument("--out", type=Path, default=HERE.parent / "results")
-    ap.add_argument("--scratch", type=Path, default=Path("/tmp/xfairmed_check_scratch"))
+    ap.add_argument("--scratch", type=Path, default=Path("/tmp/evidence_checker_scratch"))
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
     B = build_all(a.repo, a.v2, a.out)

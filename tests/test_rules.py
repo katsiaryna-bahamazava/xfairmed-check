@@ -1,9 +1,9 @@
 """Unit tests on a small hand-written bundle (no dependency on the toolkit repo)."""
 import copy
 
-from xfairmed_check.engine import run_checks
-from xfairmed_check.ledger import ledger_entry
-from xfairmed_check.rules import Finding
+from evidence_checker.engine import run_checks
+from evidence_checker.ledger import ledger_entry
+from evidence_checker.rules import Finding
 
 
 def bundle():

@@ -1,6 +1,5 @@
-"""XFAIR-MED Check: evidence-to-review checks over XFAIR-MED audit outputs."""
-from .bundle import build_bundle
-from .engine import run_checks
+"""Deprecated name. The package is now `evidence_checker`; this alias keeps old imports working."""
+from evidence_checker import run_checks  # noqa: F401
+from evidence_checker.adapters.xfairmed_v1 import build_bundle  # noqa: F401
 
 __all__ = ["build_bundle", "run_checks"]
-__version__ = "0.1.0"
